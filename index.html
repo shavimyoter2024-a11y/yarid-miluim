@@ -671,7 +671,7 @@
       <div class="wrap hero__foot">
         <div class="stats">
           <div class="stat"><b>4</b><span>ירידים ברחבי הארץ</span></div>
-          <div class="stat"><b>אלפי</b><span>מבקרים</span></div>
+          <div class="stat"><b>מאות</b><span>בעלי עסקים</span></div>
           <div class="stat"><b>8.9 עד 1.10</b><span>ספטמבר 26</span></div>
         </div>
         <div class="scroll-cue"><span class="bar"></span> גללו למטה</div>
@@ -762,15 +762,15 @@
         <div class="steps">
           <div class="step rv" style="--d:.05s">
             <h3>לוחצים ונרשמים</h3>
-            <p>לוחצים על "אני רוצה להירשם" וממלאים טופס קצר: הפרטים שלכם, פרטי העסק, הסיפור שמאחוריו ואישור התקנון.</p>
+            <p>לוחצים על "אני רוצה להירשם" וממלאים טופס קצר: הפרטים שלכם, פרטי העסק ואישור התקנון.</p>
           </div>
           <div class="step rv" style="--d:.12s">
-            <h3>אימות מילואים בוואטסאפ</h3>
-            <p>אחרי השליחה תקבלו מאיתנו <b>הודעת וואטסאפ קצרה</b> לאימות שירות המילואים — תהליך פשוט של פחות מדקה.</p>
+            <h3>הפקת היריד בוחרת</h3>
+            <p>הבקשות מועברות להפקת היריד הרלוונטי, שבוחרת את המציגים המתאימים לכל יריד.</p>
           </div>
           <div class="step rv" style="--d:.19s">
-            <h3>הפקת היריד בוחרת</h3>
-            <p>הבקשות מועברות להפקת היריד הרלוונטי, שבוחרת את המציגים. נבחרתם? חוזרים אליכם עם כל הפרטים.</p>
+            <h3>אימות ובחינת התאמה סופית</h3>
+            <p>אחרי הבחירה תקבלו מאיתנו <b>הודעת וואטסאפ קצרה</b> לאימות סופי — תהליך של פחות מדקה.</p>
           </div>
         </div>
       </div>
@@ -821,7 +821,7 @@
                 <div class="field">
                   <label for="phone">טלפון <span class="req">*</span></label>
                   <input type="tel" id="phone" name="phone" class="ltr" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="050-1234567" aria-describedby="phoneHint" required />
-                  <span class="field__hint" id="phoneHint">למספר הזה תישלח הודעת האימות בוואטסאפ</span>
+                  <span class="field__hint" id="phoneHint">למספר הזה תישלח הודעת האישור בוואטסאפ</span>
                 </div>
                 <div class="field">
                   <label for="birthdate">תאריך לידה <span class="req">*</span></label>
@@ -870,10 +870,7 @@
                   <label for="links">קישור לאתר / רשתות חברתיות של העסק <span class="opt">(לא חובה)</span></label>
                   <input type="text" id="links" name="links" class="ltr" dir="ltr" inputmode="url" placeholder="https://instagram.com/mybusiness" />
                 </div>
-                <div class="field field--full">
-                  <label for="story">סיפור אישי <span class="req">*</span></label>
-                  <textarea id="story" name="story" class="tall" maxlength="2000" placeholder="ספרו לנו קצת עליכם: על השירות, על העסק ועל הדרך — הסיפור שלכם עוזר להפקה להכיר אתכם" required></textarea>
-                </div>
+                <!-- שדה "סיפור אישי" הוסר לבקשת טום 09.08 — העמודות בשיטס נשארות ריקות -->
 
                 <!-- honeypot: humans never see it; a filled value = bot, silently dropped -->
                 <div class="hp-field" aria-hidden="true">
@@ -881,10 +878,12 @@
                   <input type="text" id="hp_website" name="hp_website" tabindex="-1" autocomplete="off" />
                 </div>
 
-                <!-- הצהרת מילואים — דרישת טום 09.08: "צ'ק בוקס של אני מילואימניק" -->
+                <!-- אישור פנייה חוזרת — נוסח טום 09.08 (הוחלף מהצהרת מילואים:
+                     "אימות מילואים" = מידע רגיש, לא מופיע בדף). name=miluim נשאר
+                     כדי לא לשבור את המיפוי ב-Make/שיטס. -->
                 <div class="consent consent--miluim" id="miluimWrap">
                   <input type="checkbox" id="miluim" name="miluim" required />
-                  <label for="miluim"><b>אני מילואימניק/ית 🪖</b> — אני מצהיר/ה ששירתתי במילואים במהלך המלחמה. <span class="req">*</span></label>
+                  <label for="miluim">במידה ונמצאתי מתאים/ה, אני מאשר/ת לקבל פנייה חוזרת ובחינת התאמה סופית. <span class="req">*</span></label>
                 </div>
 
 
@@ -903,7 +902,7 @@
                 <div class="form-submit">
                   <button type="submit" class="btn btn-main btn-lg" id="submitBtn">שליחת הרשמה ליריד&nbsp;←</button>
                   <p class="form-msg" id="formMsg" role="status"></p>
-                  <p class="form-note">🪖 אחרי השליחה תקבלו <b>הודעת וואטסאפ לאימות שירות המילואים</b></p>
+                  <p class="form-note">💬 אחרי השליחה תקבלו מאיתנו <b>הודעת אישור בוואטסאפ</b></p>
                   <p class="form-privacy">הפרטים נשמרים במערכת של קהילת שווים יותר ומשמשים לצורך ההרשמה לירידים בלבד.</p>
                 </div>
 
@@ -967,8 +966,8 @@
             <div class="success on-light" id="formSuccess" tabindex="-1" hidden>
               <div class="success__check" aria-hidden="true">♥</div>
               <h3 class="display">ההרשמה נקלטה. <span class="accent">תודה!</span></h3>
-              <p>בזמן הקרוב תישלח למספר שמסרתם <b>הודעת וואטסאפ לאימות שירות המילואים</b>.</p>
-              <p>לאחר האימות, הבקשה תועבר להפקת היריד הרלוונטי — ואם העסק שלכם ייבחר להציג, ניצור איתכם קשר עם כל הפרטים.</p>
+              <p>בזמן הקרוב תישלח למספר שמסרתם <b>הודעת אישור בוואטסאפ</b>.</p>
+              <p>הבקשה תועבר להפקת היריד הרלוונטי — ואם העסק שלכם יימצא מתאים, תקבלו פנייה חוזרת לאימות ובחינת התאמה סופית, עם כל הפרטים.</p>
               <a class="btn btn-line" href="https://wa.me/972587929195" target="_blank" rel="noopener">יש שאלה? דברו איתנו בוואטסאפ</a>
             </div>
           </div>
@@ -1111,7 +1110,6 @@
           [form.business_name, !!val("business_name")],
           [form.yarid,         !!val("yarid")],
           [form.offering,      !!val("offering")],
-          [form.story,         !!val("story")],
           [form.miluim,        form.miluim.checked],
           [form.consent,       form.consent.checked]
         ];
@@ -1124,7 +1122,7 @@
           msg.classList.add("err");
           msg.textContent = firstBad === form.phone ? "בדקו שמספר הטלפון תקין (למשל 050-1234567) ונסו שוב."
                           : firstBad === form.email ? "בדקו שכתובת המייל תקינה ונסו שוב."
-                          : firstBad === form.miluim ? "ההרשמה מיועדת למשרתי ומשרתות מילואים — יש לסמן את ההצהרה."
+                          : firstBad === form.miluim ? "כדי להירשם יש לאשר קבלת פנייה חוזרת לבחינת התאמה."
                           : firstBad === form.consent ? "כדי להירשם צריך לאשר את התקנון בתחתית הטופס."
                           : "יש להשלים את שדות החובה המסומנים.";
           firstBad.closest(".field, .consent").scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1154,7 +1152,6 @@
           yarid: val("yarid"),
           offering: val("offering"),
           links: val("links"),
-          story: val("story"),
           miluim: "כן",
           consent: "כן",
           newsletter: form.newsletter.checked ? "כן" : "לא",
