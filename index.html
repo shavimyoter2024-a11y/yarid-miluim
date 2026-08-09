@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4eedd" />
+
+  <title>יריד הלב עם המילואימניקים · הרשמה לבעלי עסקים | שווים יותר</title>
+  <meta name="description" content="שירתתם במילואים במהלך המלחמה ויש לכם עסק? הירשמו ליריד הלב עם המילואימניקים — סדרה ארצית של ירידי מכירה, 8.9 עד 1.10: נמל יפו, ירושלים, חיפה ובאר שבע. הכניסה למבקרים חופשית, ההרשמה למציגים פתוחה ומספר המקומות מוגבל." />
+  <meta property="og:title" content="יריד הלב עם המילואימניקים | שווים יותר" />
+  <meta property="og:description" content="אתם התגייסתם למעננו, עכשיו תורנו להתגייס למענכם: 4 ירידי מכירה לעסקים של משרתי המילואים — נמל יפו, ירושלים, חיפה ובאר שבע, ספטמבר 26." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventSeries",
+    "name": "יריד הלב עם המילואימניקים · שווים יותר",
+    "description": "סדרה ארצית של ירידי מכירה לעסקים של משרתי המילואים, בשיתוף N12: נמל יפו (8-10.9), ירושלים כיכר ספרא (16-18.9), חיפה היכל הספורט רוממה (22-24.9) ובאר שבע מתחם סינמה סיטי (29.9-1.10). הכניסה למבקרים חופשית.",
+    "organizer": { "@type": "Organization", "name": "שווים יותר ר.מ.י.ד בע\"מ" },
+    "startDate": "2026-09-08",
+    "endDate": "2026-10-01",
+    "isAccessibleForFree": true,
+    "location": [
+      { "@type": "Place", "name": "נמל יפו, מחסן 2" },
+      { "@type": "Place", "name": "ירושלים, כיכר ספרא" },
+      { "@type": "Place", "name": "חיפה, היכל הספורט רוממה" },
+      { "@type": "Place", "name": "באר שבע, מתחם סינמה סיטי" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── ערכת "יריד הלב" — נגזרת מהגרפיקה הרשמית של הקמפיין (08.08.26):
+       זית-צבאי + קרם/חאקי של המדבקה + אדום הלב. פסי הדגשה בסגנון מרקר
+       כמו בפוסטר. ── */
+    :root {
+      --olive:      #4a5037;                        /* רקע הפוסטר */
+      --olive-lift: #565d41;
+      --olive-deep: #515839;                        /* פנים המדבקה */
+      --cream:      #f4eedd;                        /* פס הלוגואים / מדבקה */
+      --card:       #f9f4e6;
+      --khaki:      #e7d79f;                        /* פסי ההדגשה */
+      --red:        #de3226;                        /* הלב + כניסה חופשית */
+      --red-deep:   #c1281d;
+      --red-soft:   rgba(222,50,38,.1);
+      --ink:        #363b26;                        /* טקסט על קרם */
+      --muted-ink:  rgba(54,59,38,.68);
+      --line-ink:   rgba(54,59,38,.16);
+      --muted:      rgba(244,238,221,.66);          /* טקסט משני על זית */
+      --line:       rgba(244,238,221,.16);
+      --line-2:     rgba(244,238,221,.3);
+      --bad:        #ffb4a8;                        /* שגיאות על רקע כהה */
+      --bad-ink:    #b3261e;                        /* שגיאות על רקע בהיר */
+      --maxw: 1320px;
+      --ease: cubic-bezier(.22,1,.36,1);
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
+    a, button, summary { -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0; background: var(--olive); color: var(--cream);
+      font-family: "Assistant", "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.5;
+      padding-bottom: 52px; /* room for the fixed marquee */
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: var(--red); color: #fdf6e8; }
+
+    .display { font-family: "Heebo", "Assistant", sans-serif; }
+    .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: 30px; }
+
+    /* ---------------- Top bar — פס קרם כמו רצועת הלוגואים בפוסטר ---------------- */
+    .topbar {
+      position: fixed; inset: 0 0 auto 0; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 30px;
+      background: var(--cream); box-shadow: 0 1px 0 var(--line-ink);
+      transition: padding .3s, box-shadow .3s;
+    }
+    .topbar.scrolled { padding-block: 9px; box-shadow: 0 6px 24px -14px rgba(20,24,10,.5); }
+    .brand { display: flex; align-items: center; }
+    .brand__name { font-family: "Heebo", sans-serif; font-weight: 900; font-size: 28px; letter-spacing: -.8px; color: var(--ink); line-height: 1; }
+    .brand__name b { color: var(--red); }
+
+    .topbar__status { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--muted-ink); }
+    .topbar__status .pulse {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--red);
+      box-shadow: 0 0 0 0 rgba(222,50,38,.4); animation: pulse 2.4s infinite;
+    }
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(222,50,38,.4)} 70%{box-shadow:0 0 0 9px rgba(222,50,38,0)} 100%{box-shadow:0 0 0 0 rgba(222,50,38,0)} }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      font-family: "Assistant", sans-serif; font-weight: 700; cursor: pointer; border: 0;
+      transition: transform .5s var(--ease), background .25s, color .25s;
+    }
+    .btn-main { background: var(--red); color: #fdf6e8; font-size: 15.5px; padding: 12px 24px; border-radius: 100px; }
+    .btn-main:hover { background: var(--red-deep); }
+    .btn-lg { font-size: 17px; padding: 16px 34px; }
+    .btn-line {
+      background: transparent; color: var(--cream); font-weight: 600; font-size: 16px;
+      padding: 15px 6px; border-radius: 0; position: relative;
+    }
+    .btn-line::after {
+      content: ""; position: absolute; inset-inline: 6px; bottom: 8px; height: 1.5px;
+      background: var(--line-2); transition: background .25s;
+    }
+    .btn-line:hover::after { background: var(--khaki); }
+    /* על משטחים בהירים (כרטיס ההצלחה) */
+    .on-light .btn-line { color: var(--ink); }
+    .on-light .btn-line::after { background: var(--line-ink); }
+    .on-light .btn-line:hover::after { background: var(--red); }
+
+    /* ---------------- Hero ---------------- */
+    .hero {
+      position: relative; min-height: 100svh; display: flex; flex-direction: column;
+      overflow: hidden;
+      background: radial-gradient(120% 85% at 84% 6%, var(--olive-lift) 0%, var(--olive) 60%);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: .4;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+    }
+    .hero__mark {
+      position: absolute; z-index: 0; inset-block-end: -4%; inset-inline-start: -1%;
+      font-size: 20vw; line-height: .8; font-weight: 900; letter-spacing: -.03em;
+      color: transparent; -webkit-text-stroke: 1.5px rgba(231,215,159,.13);
+      pointer-events: none; user-select: none; white-space: nowrap;
+    }
+    .hero__edge {
+      position: absolute; z-index: 4; inset-inline-start: 22px; inset-block-start: 50%;
+      transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl;
+      font-size: 12px; letter-spacing: 1px; color: var(--muted);
+    }
+
+    .hero__grid {
+      position: relative; z-index: 5; flex: 1;
+      display: flex; flex-direction: column; justify-content: center;
+      padding-block: 118px 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 14px; align-self: flex-start;
+      font-size: 14px; letter-spacing: .4px; color: var(--khaki); font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .eyebrow::before { content: ""; width: 42px; height: 1.5px; background: var(--red); }
+    .eyebrow .heart { color: var(--red); }
+
+    .hero__title {
+      margin: 0; font-weight: 900; letter-spacing: -.02em;
+      font-size: clamp(42px, 7vw, 100px); line-height: 1.04; color: var(--cream);
+    }
+    .hero__title .line { display: block; overflow: hidden; padding-bottom: .08em; }
+    .hero__title .line > span { display: block; }
+    /* פס מרקר חאקי — כמו פסי ההדגשה בפוסטר */
+    .hero__title .accent {
+      display: inline-block; background: var(--khaki); color: var(--ink);
+      padding: .01em .16em .04em; border-radius: 6px; transform: rotate(-1.2deg);
+    }
+
+    .hero__sub {
+      margin: 28px 0 0; max-width: 46ch; font-size: clamp(17px, 1.9vw, 21px);
+      color: var(--muted); font-weight: 400; line-height: 1.6;
+    }
+    .hero__sub b { color: var(--khaki); font-weight: 700; }
+
+    .hero__cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 38px; }
+
+    /* ── מדבקת הקמפיין — שחזור CSS של הפוסטר ── */
+    .sticker {
+      margin: 0; background: #fbf6e7; padding: 15px; border-radius: 26px;
+      box-shadow: 0 34px 70px -28px rgba(15,18,7,.65), 0 6px 18px -8px rgba(15,18,7,.35);
+      transform: rotate(-7deg);
+      width: min(400px, 86vw);
+    }
+    .sticker__inner {
+      background: var(--olive-deep); border-radius: 14px; padding: 34px 26px 30px;
+      text-align: center; overflow: hidden;
+    }
+    .sticker__title {
+      display: block; font-family: "Heebo", sans-serif; font-weight: 900;
+      font-size: clamp(44px, 4.6vw, 62px); line-height: 1; letter-spacing: -.02em;
+      color: var(--khaki);
+    }
+    .sticker__title .heart { color: var(--red); }
+    .sticker__bar {
+      display: inline-block; margin-top: 16px; background: var(--khaki); color: var(--ink);
+      font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(21px, 2vw, 27px);
+      padding: 6px 16px 8px; border-radius: 4px; transform: rotate(-1.5deg);
+    }
+    .sticker__redline { display: block; width: 56%; height: 9px; background: var(--red); margin: 14px auto 0; border-radius: 2px; transform: rotate(-1.5deg); }
+    /* דסקטופ רחב: המדבקה צפה בצד הפנוי של ה-hero */
+    @media (min-width: 1180px) {
+      .sticker { position: absolute; z-index: 2; inset-inline-end: 4vw; top: 24%; }
+    }
+    @media (max-width: 1179.98px) {
+      .sticker { align-self: center; margin-top: 42px; transform: rotate(-4deg); }
+    }
+
+    /* CSS-only entrance — staggered rise-in on load (motion runs for everyone,
+       same call as the course pages: the animations ARE part of the product) */
+    @keyframes riseIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+    @keyframes stickIn { from { opacity: 0; transform: rotate(-7deg) scale(.85); } to { opacity: 1; } }
+    @keyframes markIn { from { opacity: 0; } to { opacity: 1; } }
+    body.js .hero .eyebrow,
+    body.js .hero__title .line > span,
+    body.js .hero__sub,
+    body.js .hero__cta > *,
+    body.js .hero__foot .stat,
+    body.js .scroll-cue { opacity: 0; animation: riseIn .9s var(--ease) forwards; }
+    body.js .hero .eyebrow { animation-delay: .1s; }
+    body.js .hero__title .line:nth-child(1) > span { animation-delay: .22s; }
+    body.js .hero__title .line:nth-child(2) > span { animation-delay: .34s; }
+    body.js .hero__sub { animation-delay: .5s; }
+    body.js .hero__cta > *:nth-child(1) { animation-delay: .62s; }
+    body.js .hero__cta > *:nth-child(2) { animation-delay: .7s; }
+    body.js .hero__foot .stat:nth-child(1) { animation-delay: .78s; }
+    body.js .hero__foot .stat:nth-child(2) { animation-delay: .86s; }
+    body.js .hero__foot .stat:nth-child(3) { animation-delay: .94s; }
+    body.js .scroll-cue { animation-delay: 1.05s; }
+    body.js .hero__mark { opacity: 0; animation: markIn 1.6s ease .5s forwards; }
+    body.js .sticker { opacity: 0; animation: stickIn .8s var(--ease) .55s forwards; }
+
+    .hero__foot {
+      position: relative; z-index: 5;
+      border-top: 1px solid var(--line);
+      display: flex; align-items: stretch; justify-content: space-between; flex-wrap: wrap;
+    }
+    .stats { display: flex; }
+    .stat { padding: 20px 32px 22px; border-inline-start: 1px solid var(--line); }
+    .stat:first-child { border-inline-start: 0; padding-inline-start: 0; }
+    .stat b { display: block; font-family: "Heebo", sans-serif; font-weight: 800; font-size: 27px; color: var(--cream); }
+    .stat span { font-size: 13px; color: var(--muted); }
+    .scroll-cue { display: flex; align-items: center; gap: 12px; padding: 20px 0 22px; font-size: 12.5px; letter-spacing: 1px; color: var(--muted); }
+    .scroll-cue .bar { position: relative; width: 1.5px; height: 38px; background: var(--line-2); overflow: hidden; }
+    .scroll-cue .bar::after { content:""; position:absolute; inset-inline:0; top:-40%; height:40%; background: var(--red); animation: drop 2.2s var(--ease) infinite; }
+    @keyframes drop { 0%{top:-45%} 60%,100%{top:105%} }
+
+    .marquee {
+      position: fixed; inset-inline: 0; bottom: 0; z-index: 45;
+      overflow: hidden; white-space: nowrap;
+      background: rgba(244,238,221,.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border-top: 1px solid var(--line-ink);
+    }
+    .marquee__track { display: inline-flex; animation: marq 30s linear infinite; will-change: transform; }
+    .marquee__track span { font-family: "Heebo", sans-serif; font-size: 17px; font-weight: 700; color: var(--muted-ink); padding: 14px 24px; }
+    .marquee__track span i { color: var(--red); font-style: normal; margin-inline-start: 24px; }
+    @keyframes marq { to { transform: translateX(50%); } }
+
+    .mobile-cta { display: none; }
+
+    /* ---------------- Sections ---------------- */
+    .section { position: relative; padding-block: clamp(74px, 12vh, 130px); scroll-margin-top: 84px; }
+    .section__head { margin-bottom: 44px; }
+    .section__title { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(30px, 4.6vw, 58px); line-height: 1.14; letter-spacing: -.02em; margin: 14px 0 0; color: var(--cream); }
+    .section__title .accent {
+      display: inline-block; background: var(--khaki); color: var(--ink);
+      padding: 0 .14em .04em; border-radius: 5px; transform: rotate(-1deg);
+    }
+    .section__lead { margin: 18px 0 0; max-width: 58ch; color: var(--muted); font-size: 18px; line-height: 1.6; }
+    .section__lead b { color: var(--khaki); font-weight: 700; }
+
+    /* section backdrops */
+    #cities { background: radial-gradient(85% 60% at 15% 0%, rgba(231,215,159,.08), transparent 60%); }
+    #how { background: radial-gradient(85% 60% at 85% 0%, rgba(231,215,159,.07), transparent 60%); }
+    /* ---------------- Registration overlay — "הדף הבא" ---------------- */
+    /* נפתח דרך קישורי ‎#register: עובד גם בלי JS בזכות ‎:target; ה-JS רק נועל
+       גלילה, ממקד את השדה הראשון ומאפשר סגירה ב-Esc */
+    .overlay {
+      position: fixed; inset: 0; z-index: 70; display: none;
+      overflow-y: auto; overscroll-behavior: contain;
+      background: var(--olive);
+    }
+    .overlay:target { display: block; }
+    body.modal-open { overflow: hidden; }
+    .overlay__bar {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 12px 20px; background: var(--cream); box-shadow: 0 1px 0 var(--line-ink);
+    }
+    .overlay__back { font-weight: 700; font-size: 15px; color: var(--ink); transition: color .2s; }
+    .overlay__back:hover { color: var(--red); }
+    .overlay__title { font-family: "Heebo", sans-serif; font-weight: 900; font-size: 17px; color: var(--ink); }
+    .overlay__title .heart { color: var(--red); }
+    .overlay__body {
+      padding: 30px 20px 70px;
+      background: radial-gradient(75% 55% at 50% 0%, rgba(231,215,159,.13), transparent 65%);
+    }
+    .overlay .ticket { margin-inline: auto; }
+
+    /* takanon scroll box */
+    .takanon h4 { font-family: "Heebo", sans-serif; font-weight: 800; font-size: 15px; color: var(--ink); margin: 0 0 8px; }
+    .takanon__box {
+      max-height: 250px; overflow-y: auto; padding: 16px 18px;
+      border: 1px solid var(--line-ink); border-radius: 14px; background: #fff;
+      font-size: 13.5px; color: var(--muted-ink); line-height: 1.66;
+    }
+    .takanon__box h5 { font-size: 13.5px; font-weight: 800; color: var(--ink); margin: 14px 0 4px; }
+    .takanon__box h5:first-child { margin-top: 0; }
+    .takanon__box p { margin: 0 0 6px; }
+
+    /* הצהרת "אני מילואימניק" — מודגשת בחאקי */
+    .consent--miluim { background: rgba(231,215,159,.28); border-color: rgba(84,90,60,.28); }
+    .consent--miluim label { color: var(--ink); }
+    .consent--miluim label b { font-weight: 800; }
+
+    /* הסכמת דיוור — רשות, בלי מצב שגיאה */
+    .consent--optional { background: transparent; border-style: dashed; }
+    .consent--optional .opt-tag { color: rgba(54,59,38,.5); font-size: 12.5px; }
+
+    /* רצועה בהירה — כמו פס הלוגואים */
+    #fields { background: var(--cream); border-block: 1px solid var(--line-ink); }
+    #fields .section__title { color: var(--ink); }
+    #fields .section__title .accent { background: var(--red); color: #fdf6e8; }
+    #fields .section__lead { color: var(--muted-ink); }
+    #fields .section__lead b { color: var(--red); }
+    #fields .eyebrow { color: var(--red); }
+    #fields .eyebrow::before { background: var(--red); }
+
+    /* תג "כניסה חופשית" — הקוביה האדומה מהפוסטר */
+    .free-badge {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
+      background: var(--red); color: #fdf6e8;
+      font-family: "Heebo", sans-serif; font-weight: 900; font-size: 17px;
+      padding: 9px 20px 11px; border-radius: 5px; transform: rotate(-1.5deg);
+      box-shadow: 0 14px 30px -14px rgba(222,50,38,.6);
+    }
+
+    /* cities / venues — כרטיסי קרם על הזית */
+    .city-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
+    @media (max-width: 1080px) { .city-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 560px) { .city-grid { grid-template-columns: 1fr; } }
+    .city-card {
+      position: relative; overflow: hidden;
+      border-radius: 18px; padding: 30px 26px 26px;
+      background: var(--card); color: var(--ink);
+      box-shadow: 0 16px 34px -20px rgba(15,18,7,.55);
+      transition: transform .4s var(--ease), box-shadow .25s;
+    }
+    .city-card:hover { transform: translateY(-3px) rotate(-.5deg); box-shadow: 0 24px 46px -22px rgba(15,18,7,.65); }
+    .city-card__n { font-family: "Heebo", sans-serif; font-weight: 900; font-size: 15px; color: var(--red); }
+    .city-card h3 { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(26px, 2.6vw, 34px); color: var(--ink); margin: 10px 0 6px; letter-spacing: -.02em; }
+    .city-card p { margin: 0; color: var(--muted-ink); font-size: 15px; line-height: 1.6; }
+    .city-card__when {
+      display: inline-block; margin-top: 16px; font-family: "Heebo", sans-serif;
+      font-size: 15px; font-weight: 900; padding: 4px 13px 6px; border-radius: 4px;
+      background: var(--khaki); color: var(--ink); transform: rotate(-1.5deg);
+    }
+    .city-card__ghost {
+      position: absolute; inset-block-end: -18px; inset-inline-end: -6px; z-index: 0;
+      font-family: "Heebo", sans-serif; font-weight: 900; font-size: 92px; line-height: 1;
+      color: transparent; -webkit-text-stroke: 1px rgba(54,59,38,.14);
+      pointer-events: none; user-select: none;
+    }
+
+    /* categories — דוכנים צבעוניים על רצועת הקרם */
+    .cat-chips { display: flex; flex-wrap: wrap; gap: 10px; max-width: 900px; }
+    .cat-chips span {
+      font-family: "Heebo", sans-serif; font-size: 15px; font-weight: 700; padding: 11px 22px;
+      border-radius: 100px; border: 1px solid; color: var(--ink);
+      transition: transform .4s var(--ease), box-shadow .25s;
+    }
+    .cat-chips span:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -12px rgba(54,59,38,.4); }
+    .cat-chips span:nth-of-type(4n+1) { background: var(--khaki); border-color: #d3c07c; }
+    .cat-chips span:nth-of-type(4n+2) { background: #dde3cc; border-color: #bcc6a0; }
+    .cat-chips span:nth-of-type(4n+3) { background: #f6d8d3; border-color: #e5b3ab; }
+    .cat-chips span:nth-of-type(4n+4) { background: #fff; border-color: #d9d2ba; }
+    .cat-chips .more { background: transparent !important; border: 1.5px dashed rgba(54,59,38,.35) !important; color: var(--muted-ink); }
+
+    /* how it works — numbered steps */
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; counter-reset: step; }
+    @media (max-width: 900px) { .steps { grid-template-columns: 1fr; max-width: 560px; } }
+    .step {
+      position: relative; border-radius: 18px; padding: 30px 26px;
+      background: var(--card); color: var(--ink);
+      box-shadow: 0 16px 34px -20px rgba(15,18,7,.55);
+      transition: box-shadow .25s;
+    }
+    .step:hover { box-shadow: 0 24px 46px -22px rgba(15,18,7,.65); }
+    .step::before {
+      counter-increment: step; content: counter(step);
+      display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+      font-family: "Heebo", sans-serif; font-weight: 900; font-size: 19px;
+      background: var(--red-soft); border: 1px solid rgba(222,50,38,.5); color: var(--red);
+      margin-bottom: 18px;
+    }
+    .step h3 { font-family: "Heebo", sans-serif; font-weight: 800; font-size: 20px; color: var(--ink); margin: 0 0 8px; }
+    .step p { margin: 0; color: var(--muted-ink); font-size: 15.5px; line-height: 1.62; }
+    .step p b { color: var(--red); font-weight: 700; }
+
+    /* ---------------- Registration form — כרטיס בסגנון המדבקה ---------------- */
+    .ticket {
+      position: relative; max-width: 860px; margin-inline: auto;
+      border-radius: 24px; overflow: hidden;
+      background: var(--card); color: var(--ink);
+      box-shadow: 0 40px 90px -40px rgba(15,18,7,.7), 0 0 70px -22px rgba(231,215,159,.25);
+    }
+    .ticket__head {
+      position: relative; text-align: center; padding: 38px 30px 30px;
+      border-bottom: 1.5px dashed rgba(222,50,38,.45);
+      background: linear-gradient(180deg, rgba(231,215,159,.35), rgba(231,215,159,.08));
+    }
+    /* punched holes on the perforation line — the ticket look */
+    .ticket__head::before, .ticket__head::after {
+      content: ""; position: absolute; bottom: -14px; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--olive); border: 1px solid rgba(222,50,38,.35);
+    }
+    .ticket__head::before { inset-inline-start: -15px; }
+    .ticket__head::after  { inset-inline-end: -15px; }
+    .ticket__badge {
+      display: inline-block; background: var(--red); color: #fdf6e8;
+      font-family: "Heebo", sans-serif; font-weight: 800; font-size: 14px;
+      padding: 7px 16px 8px; border-radius: 4px; margin-bottom: 18px; transform: rotate(-1.5deg);
+    }
+    .ticket__title { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(26px, 3.6vw, 40px); margin: 0; line-height: 1.2; letter-spacing: -.02em; color: var(--ink); }
+    .ticket__title .accent {
+      display: inline-block; background: var(--khaki); color: var(--ink);
+      padding: 0 .14em .04em; border-radius: 5px; transform: rotate(-1.2deg);
+    }
+    .ticket__sub { margin: 12px auto 0; max-width: 54ch; color: var(--muted-ink); font-size: 15.5px; line-height: 1.6; }
+    .ticket__body { padding: 34px 34px 38px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field--full { grid-column: 1 / -1; }
+    .field > label { font-weight: 700; font-size: 14.5px; color: var(--ink); }
+    .field > label .req { color: var(--red); margin-inline-start: 2px; }
+    .field > label .opt { color: var(--muted-ink); font-weight: 400; font-size: 13px; }
+    .field__hint { font-size: 12.5px; color: var(--muted-ink); margin-top: -2px; }
+
+    .field input[type="text"], .field input[type="email"], .field input[type="tel"],
+    .field input[type="date"], .field select, .field textarea {
+      width: 100%; padding: 13px 16px; border-radius: 14px;
+      border: 1px solid rgba(54,59,38,.28); background: #fff;
+      color: var(--ink); font: inherit; font-size: 15.5px;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(222,50,38,.13);
+    }
+    .field input::placeholder, .field textarea::placeholder { color: rgba(54,59,38,.35); }
+    .field textarea { resize: vertical; min-height: 92px; line-height: 1.55; }
+    .field textarea.tall { min-height: 140px; }
+
+    /* LTR data goes in LTR fields — email / phone / links type left-to-right */
+    .field .ltr { direction: ltr; text-align: left; }
+    .field .ltr::placeholder { direction: ltr; text-align: left; }
+
+    /* native pickers on a light card */
+    .field input[type="date"] { color-scheme: light; }
+    .field select {
+      appearance: none; -webkit-appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%23363b26' stroke-opacity='.55' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: left 14px center; padding-inline-end: 44px;
+    }
+    .field select:invalid { color: rgba(54,59,38,.35); }
+    .field select option { background: #fff; color: var(--ink); }
+
+    .field.bad input, .field.bad select, .field.bad textarea { border-color: var(--bad-ink); }
+    .field.bad > label { color: var(--bad-ink); }
+
+    /* consent */
+    .consent {
+      grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 12px;
+      margin-top: 6px; padding: 18px 18px; border-radius: 14px;
+      border: 1px solid var(--line-ink); background: rgba(54,59,38,.045);
+    }
+    .consent input[type="checkbox"] {
+      width: 20px; height: 20px; flex: 0 0 auto; margin: 2px 0 0;
+      accent-color: var(--red); cursor: pointer;
+    }
+    .consent label { font-size: 13.5px; color: var(--muted-ink); line-height: 1.62; cursor: pointer; }
+    .consent.bad { border-color: var(--bad-ink); }
+    .consent.bad label { color: var(--bad-ink); }
+
+    .form-legend { margin: 0 0 18px; font-size: 13px; color: var(--muted-ink); }
+    .form-legend .req { color: var(--red); }
+    .form-submit { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: stretch; gap: 12px; margin-top: 8px; }
+    .form-submit .btn { width: 100%; text-align: center; box-shadow: 0 14px 30px -14px rgba(222,50,38,.55); }
+    .form-submit .btn[disabled] { opacity: .6; cursor: wait; }
+    .form-msg { min-height: 1.5em; margin: 0; text-align: center; font-size: 14.5px; color: var(--muted-ink); }
+    .form-msg.err { color: var(--bad-ink); }
+    .form-note { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; color: var(--muted-ink); text-align: center; }
+    .form-note b { color: var(--red); font-weight: 700; }
+    .form-privacy { margin: 2px 0 0; text-align: center; font-size: 12.5px; color: rgba(54,59,38,.5); }
+
+    /* honeypot — invisible to humans, tempting to bots */
+    .hp-field { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+    /* success panel */
+    .success { text-align: center; padding: 26px 10px 10px; }
+    .success:focus { outline: none; }
+    .success__check {
+      width: 74px; height: 74px; margin: 0 auto 22px; border-radius: 50%;
+      display: grid; place-items: center; font-size: 32px; font-weight: 900; color: var(--red);
+      background: var(--red-soft); border: 1.5px solid rgba(222,50,38,.55);
+      animation: popIn .6s var(--ease) both;
+    }
+    @keyframes popIn { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .success h3 { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(24px, 3.4vw, 34px); margin: 0 0 12px; color: var(--ink); }
+    .success h3 .accent { color: var(--red); }
+    .success p { margin: 0 auto 10px; max-width: 52ch; color: var(--muted-ink); font-size: 16px; line-height: 1.65; }
+    .success p b { color: var(--red); font-weight: 700; }
+    .success .btn { margin-top: 16px; }
+
+    /* footer — פס קרם סוגר, כמו רצועת הלוגואים למעלה */
+    .footer { border-top: 1px solid var(--line-ink); margin-top: clamp(30px, 6vh, 60px); background: var(--cream); color: var(--ink); }
+    .footer__cta { text-align: center; padding-block: clamp(66px, 11vh, 120px); }
+    .footer__cta h2 { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(30px, 5vw, 62px); letter-spacing: -.02em; line-height: 1.18; margin: 0 0 30px; color: var(--ink); }
+    .footer__cta h2 .accent {
+      display: inline-block; background: var(--red); color: #fdf6e8;
+      padding: 0 .14em .04em; border-radius: 6px; transform: rotate(-1.2deg);
+    }
+    .footer__grid { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; border-top: 1px solid var(--line-ink); padding-block: 36px; }
+    .footer__col { min-width: 200px; }
+    .footer__col h3 { font-family: "Heebo", sans-serif; font-weight: 800; font-size: 15px; color: var(--ink); margin: 0 0 12px; }
+    .footer__col p { margin: 0 0 8px; color: var(--muted-ink); font-size: 15px; line-height: 1.6; }
+    .footer__col a { transition: color .2s; }
+    .footer__col a:hover { color: var(--red); }
+    .footer__brand .brand__name { font-size: 26px; }
+    .footer__brand p { margin-top: 10px; }
+    .footer__base { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line-ink); padding-block: 20px 28px; color: var(--muted-ink); font-size: 13px; }
+
+    /* scroll reveal (JS adds .rv; without JS everything stays visible) */
+    body.js .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
+    body.js .rv.in { opacity: 1; transform: none; }
+    @keyframes shine { 0%, 58% { inset-inline-start: -50%; } 100% { inset-inline-start: 115%; } }
+
+    /* touch-first interactions: press feedback replaces hover on phones */
+    @media (pointer: coarse) {
+      .btn-main:active { transform: scale(.96); background: var(--red-deep); }
+      body.js .rv { transform: translateY(36px) scale(.97); transition-duration: .85s, .85s; }
+      body.js .rv.in { transform: none; }
+      body.js .city-card.rv:nth-child(odd), body.js .step.rv:nth-child(odd) { transform: translate(-44px, 18px) scale(.97); }
+      body.js .city-card.rv:nth-child(even), body.js .step.rv:nth-child(even) { transform: translate(44px, 18px) scale(.97); }
+      body.js .city-card.rv.in, body.js .step.rv.in { transform: none; }
+      body.js .section__head.rv .eyebrow::before { width: 0; transition: width .9s var(--ease) .25s; }
+      body.js .section__head.rv.in .eyebrow::before { width: 42px; }
+    }
+
+    /* ---------------- Responsive ---------------- */
+    @media (max-width: 860px) {
+      .topbar { padding: 11px 18px; }
+      .topbar__status { display: none; }
+      .brand__name { font-size: 24px; }
+      .wrap { padding-inline: 20px; }
+      .hero { min-height: auto; }
+      .hero__edge { display: none; }
+      .hero__grid { flex: none; justify-content: flex-start; padding-block: 92px 34px; }
+      .hero__title { font-size: clamp(38px, 11vw, 76px); }
+      .hero__sub { margin-top: 22px; }
+      .hero__cta { margin-top: 30px; gap: 10px; }
+      .sticker { margin-top: 34px; }
+      .hero__foot { flex-direction: column; }
+      .stats { width: 100%; }
+      .stat { flex: 1; padding: 16px 12px; text-align: center; border-inline-start: 1px solid var(--line); }
+      .stat:first-child { border-inline-start: 0; padding-inline-start: 12px; }
+      .scroll-cue { display: none; }
+      .mobile-cta {
+        display: block; position: fixed; inset-inline: 0; bottom: 0; z-index: 60;
+        padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+        background: rgba(244,238,221,.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line-ink);
+      }
+      .mobile-cta .btn { width: 100%; padding: 15px; position: relative; overflow: hidden; }
+      .mobile-cta .btn::after {
+        content: ""; position: absolute; inset-block: 0; width: 42%; inset-inline-start: -50%;
+        background: linear-gradient(105deg, transparent, rgba(255,255,255,.4), transparent);
+        animation: shine 3.8s ease-in-out infinite;
+      }
+      /* פלאפונים מרנדרים את הזית ירוק/רווי יותר — אותו יישור גוונים כמו בדפי הקורסים */
+      :root { --olive: #4b5039; --olive-lift: #575c44; }
+      .hero::after { mix-blend-mode: normal; opacity: .1; }
+      .marquee { bottom: calc(76px + env(safe-area-inset-bottom)); }
+      .marquee__track span { font-size: 14px; padding: 10px 18px; }
+      body { padding-bottom: 132px; }
+
+      /* mobile depth: baked-in shadows instead of hover states */
+      .city-card, .step { box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 18px 38px -20px rgba(15,18,7,.6); }
+      .ticket { box-shadow: 0 34px 80px -34px rgba(15,18,7,.75), 0 0 60px -18px rgba(231,215,159,.3); }
+      .btn-main { box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 12px 26px -12px rgba(222,50,38,.55); }
+      .ticket__body { padding: 26px 20px 30px; }
+      .form-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .hero__cta { flex-direction: column; align-items: stretch; }
+      .hero__cta .btn-main { display: none; }
+      .btn-line { text-align: center; }
+    }
+
+    /* NOTE: motion runs for everyone — same explicit call as the course pages
+       (09.07.26): the animations ARE part of the product. */
+  </style>
+</head>
+<body>
+  <!-- the js class must exist BEFORE first paint — added late it causes a
+       visible flash: content painted, then hid, then animated back in -->
+  <script>document.body.classList.add("js");</script>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="שווים יותר">
+      <span class="brand__name">שווים יותר<b>.</b></span>
+    </a>
+
+    <div class="topbar__status"><span class="pulse"></span> <span>ההרשמה למציגים פתוחה · מספר המקומות מוגבל</span></div>
+
+    <a class="btn btn-main" href="#register">להרשמה ליריד</a>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="top">
+      <span class="hero__mark display" aria-hidden="true">יריד הלב</span>
+      <span class="hero__edge" aria-hidden="true">יריד הלב עם המילואימניקים · שווים יותר</span>
+
+      <div class="wrap hero__grid">
+        <p class="eyebrow">קהילת שווים יותר · יריד הלב עם המילואימניקים <span class="heart">♥</span> · בשיתוף N12</p>
+
+        <h1 class="hero__title display">
+          <span class="line"><span>התגייסתם למעננו.</span></span>
+          <span class="line"><span><span class="accent">עכשיו&nbsp;תורנו.</span></span></span>
+        </h1>
+
+        <p class="hero__sub">
+          אם שירתתם.ן במילואים במהלך המלחמה ואתם בעלי עסק – אנחנו מזמינים
+          אתכם להשתתף ב<b>סדרה ארצית של ירידי מכירה</b> למען העסקים שלכם.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn-main btn-lg" href="#register">אני רוצה להירשם</a>
+          <a class="btn btn-line" href="#cities">איפה ומתי?&nbsp;↓</a>
+        </div>
+
+        <!-- שחזור CSS של מדבקת הקמפיין מהגרפיקה הרשמית -->
+        <figure class="sticker" aria-hidden="true">
+          <div class="sticker__inner">
+            <span class="sticker__title">יריד ה<span class="heart">♥</span></span>
+            <span class="sticker__bar">עם המילואימניקים</span>
+            <span class="sticker__redline"></span>
+          </div>
+        </figure>
+      </div>
+
+      <div class="wrap hero__foot">
+        <div class="stats">
+          <div class="stat"><b>4</b><span>ירידים ברחבי הארץ</span></div>
+          <div class="stat"><b>אלפי</b><span>מבקרים</span></div>
+          <div class="stat"><b>8.9 עד 1.10</b><span>ספטמבר 26</span></div>
+        </div>
+        <div class="scroll-cue"><span class="bar"></span> גללו למטה</div>
+      </div>
+    </section>
+
+    <!-- WHERE & WHEN -->
+    <section class="section" id="cities">
+      <div class="wrap">
+        <div class="section__head rv">
+          <p class="eyebrow">איפה ומתי</p>
+          <h2 class="section__title display">4 ירידים. <span class="accent">אלפי מבקרים.</span></h2>
+          <p class="section__lead">
+            זו ההזמנה שלכם.ן להציג את העסק שלכם בפני אלפי מבקרים בירידים שיתקיימו
+            במהלך חודש ספטמבר ברחבי הארץ, בשיתוף <b>נמל יפו, עיריית ירושלים,
+            סינמה סיטי באר שבע ועיריית חיפה</b>.
+          </p>
+          <span class="free-badge">♥ הכניסה למבקרים חופשית</span>
+        </div>
+        <div class="city-grid">
+          <div class="city-card rv" style="--d:.05s">
+            <span class="city-card__ghost" aria-hidden="true">יפו</span>
+            <span class="city-card__n">01</span>
+            <h3>נמל יפו</h3>
+            <p>מחסן 2, נמל יפו — על המים, בשיתוף חברת נמל יפו.</p>
+            <span class="city-card__when">8-10.9.26</span>
+          </div>
+          <div class="city-card rv" style="--d:.12s">
+            <span class="city-card__ghost" aria-hidden="true">י־ם</span>
+            <span class="city-card__n">02</span>
+            <h3>ירושלים</h3>
+            <p>כיכר ספרא, בלב הבירה — בשיתוף עיריית ירושלים.</p>
+            <span class="city-card__when">16-18.9.26</span>
+          </div>
+          <div class="city-card rv" style="--d:.19s">
+            <span class="city-card__ghost" aria-hidden="true">חיפה</span>
+            <span class="city-card__n">03</span>
+            <h3>חיפה</h3>
+            <p>היכל הספורט רוממה — בשיתוף עיריית חיפה.</p>
+            <span class="city-card__when">22-24.9.26</span>
+          </div>
+          <div class="city-card rv" style="--d:.26s">
+            <span class="city-card__ghost" aria-hidden="true">ב״ש</span>
+            <span class="city-card__n">04</span>
+            <h3>באר שבע</h3>
+            <p>מתחם סינמה סיטי — בשיתוף סינמה סיטי באר שבע.</p>
+            <span class="city-card__when">29.9-1.10.26</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO CAN JOIN -->
+    <section class="section" id="fields">
+      <div class="wrap">
+        <div class="section__head rv">
+          <p class="eyebrow">למי זה מתאים</p>
+          <h2 class="section__title display">עסקים <span class="accent">מכל התחומים.</span></h2>
+          <p class="section__lead">
+            ההרשמה פתוחה לעסקים מכל התחומים – מזון, חקלאות, עיצוב, אופנה, אוכל מוכן,
+            לייף סטייל, אמנות, מתן שירותים, טיפוח, מתנות ועוד.
+          </p>
+        </div>
+        <div class="cat-chips rv">
+          <span>🍯 מזון</span>
+          <span>🌾 חקלאות</span>
+          <span>🎨 עיצוב</span>
+          <span>👗 אופנה</span>
+          <span>🍲 אוכל מוכן</span>
+          <span>🧘 לייף סטייל</span>
+          <span>🖼️ אמנות</span>
+          <span>🤝 מתן שירותים</span>
+          <span>✨ טיפוח</span>
+          <span>🎁 מתנות</span>
+          <span class="more">ועוד…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section__head rv">
+          <p class="eyebrow">איך זה עובד</p>
+          <h2 class="section__title display">שלושה צעדים <span class="accent">ואתם בפנים.</span></h2>
+          <p class="section__lead">ההרשמה פתוחה עכשיו ומספר המקומות מוגבל. מלאו את טופס ההרשמה — ואולי גם העסק שלך יהיה חלק מהיוזמה.</p>
+        </div>
+        <div class="steps">
+          <div class="step rv" style="--d:.05s">
+            <h3>לוחצים ונרשמים</h3>
+            <p>לוחצים על "אני רוצה להירשם" וממלאים טופס קצר: הפרטים שלכם, פרטי העסק, הסיפור שמאחוריו ואישור התקנון.</p>
+          </div>
+          <div class="step rv" style="--d:.12s">
+            <h3>אימות מילואים בוואטסאפ</h3>
+            <p>אחרי השליחה תקבלו מאיתנו <b>הודעת וואטסאפ קצרה</b> לאימות שירות המילואים — תהליך פשוט של פחות מדקה.</p>
+          </div>
+          <div class="step rv" style="--d:.19s">
+            <h3>הפקת היריד בוחרת</h3>
+            <p>הבקשות מועברות להפקת היריד הרלוונטי, שבוחרת את המציגים. נבחרתם? חוזרים אליכם עם כל הפרטים.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION OVERLAY — "הדף הבא": נפתח בלחיצה על "אני רוצה להירשם"
+         (כל קישורי ‎#register). בלי JS נפתח דרך ‎:target; חזרה = קישור ‎#top או Esc. -->
+    <div class="overlay" id="register" role="dialog" aria-modal="true" aria-labelledby="regTitle">
+      <div class="overlay__bar">
+        <a class="overlay__back" href="#top">→ חזרה לדף</a>
+        <span class="overlay__title">הרשמה ליריד הלב <span class="heart">♥</span></span>
+      </div>
+      <div class="overlay__body">
+        <div class="ticket">
+          <div class="ticket__head">
+            <span class="ticket__badge">ההרשמה פתוחה · מספר המקומות מוגבל</span>
+            <h3 class="ticket__title display" id="regTitle">טופס הרשמה <span class="accent">ליריד הלב.</span></h3>
+            <p class="ticket__sub">מלאו את הפרטים — ואולי גם העסק שלך יהיה חלק מהיוזמה. לוקח פחות מ-5 דקות.</p>
+          </div>
+
+          <div class="ticket__body">
+            <!--
+              ═══ חיווט (עודכן 09.08.26) ═══
+              הטופס נשלח ל-webhook הייעודי של תרחיש Make ‎#9636410
+              "יריד הלב — הרשמות מדף הנחיתה", שכותב ל:
+                • גיליון המאסטר "הרשמות יריד הלב - כל הנרשמים" (כל השדות)
+                • טאב היריד הרלוונטי בקובץ ההפקות (לפי שדה "לאיזה יריד")
+                • פיירברי: איש קשר (שם/טלפון/מייל/לידה/מגורים/UTM=N12/דיוור)
+                • וואטסאפ: מנוי מאני-צ'אט + ה-flow הקיים של הודעת היריד
+              פרטים מלאים: make-wiring.md. ⚠️ לא לשנות את שמות השדות (name=)
+              בלי לעדכן את התרחיש — המיפוי ב-Make תלוי בהם.
+            -->
+            <form id="yaridForm" novalidate>
+              <p class="form-legend">שדות המסומנים ב-<span class="req">*</span> הם שדות חובה</p>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="firstname">שם פרטי <span class="req">*</span></label>
+                  <input type="text" id="firstname" name="firstname" autocomplete="given-name" required />
+                </div>
+                <div class="field">
+                  <label for="lastname">שם משפחה <span class="req">*</span></label>
+                  <input type="text" id="lastname" name="lastname" autocomplete="family-name" required />
+                </div>
+                <div class="field">
+                  <label for="email">מייל <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" class="ltr" dir="ltr" autocomplete="email" inputmode="email" placeholder="name@example.com" required />
+                </div>
+                <div class="field">
+                  <label for="phone">טלפון <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="ltr" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="050-1234567" aria-describedby="phoneHint" required />
+                  <span class="field__hint" id="phoneHint">למספר הזה תישלח הודעת האימות בוואטסאפ</span>
+                </div>
+                <div class="field">
+                  <label for="birthdate">תאריך לידה <span class="req">*</span></label>
+                  <input type="date" id="birthdate" name="birthdate" autocomplete="bday" min="1920-01-01" max="2026-08-08" required />
+                </div>
+                <div class="field">
+                  <label for="city">מקום מגורים <span class="req">*</span></label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="עיר / יישוב" required />
+                </div>
+                <div class="field">
+                  <label for="business_type">סוג עסק <span class="req">*</span></label>
+                  <select id="business_type" name="business_type" required>
+                    <option value="" selected disabled>בחרו תחום…</option>
+                    <option>מזון</option>
+                    <option>אוכל מוכן</option>
+                    <option>חקלאות</option>
+                    <option>עיצוב</option>
+                    <option>אופנה</option>
+                    <option>לייף סטייל</option>
+                    <option>אמנות</option>
+                    <option>מתן שירותים</option>
+                    <option>טיפוח</option>
+                    <option>מתנות</option>
+                    <option>אחר</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="business_name">שם העסק <span class="req">*</span></label>
+                  <input type="text" id="business_name" name="business_name" autocomplete="organization" required />
+                </div>
+                <div class="field field--full">
+                  <label for="yarid">לאיזה יריד תרצו להירשם? <span class="req">*</span></label>
+                  <select id="yarid" name="yarid" required>
+                    <option value="" selected disabled>בחרו יריד…</option>
+                    <option>יריד נמל יפו · 8-10.9</option>
+                    <option>יריד ירושלים · 16-18.9</option>
+                    <option>יריד חיפה · 22-24.9</option>
+                    <option>יריד באר שבע · 29.9-1.10</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="offering">מה אתם מוכרים? <span class="req">*</span></label>
+                  <textarea id="offering" name="offering" maxlength="400" placeholder="כמה מילים על העסק והמוצרים או השירותים שלכם" required></textarea>
+                </div>
+                <div class="field field--full">
+                  <label for="links">קישור לאתר / רשתות חברתיות של העסק <span class="opt">(לא חובה)</span></label>
+                  <input type="text" id="links" name="links" class="ltr" dir="ltr" inputmode="url" placeholder="https://instagram.com/mybusiness" />
+                </div>
+                <div class="field field--full">
+                  <label for="story">סיפור אישי <span class="req">*</span></label>
+                  <textarea id="story" name="story" class="tall" maxlength="2000" placeholder="ספרו לנו קצת עליכם: על השירות, על העסק ועל הדרך — הסיפור שלכם עוזר להפקה להכיר אתכם" required></textarea>
+                </div>
+
+                <!-- honeypot: humans never see it; a filled value = bot, silently dropped -->
+                <div class="hp-field" aria-hidden="true">
+                  <label for="hp_website">אתר</label>
+                  <input type="text" id="hp_website" name="hp_website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <!-- הצהרת מילואים — דרישת טום 09.08: "צ'ק בוקס של אני מילואימניק" -->
+                <div class="consent consent--miluim" id="miluimWrap">
+                  <input type="checkbox" id="miluim" name="miluim" required />
+                  <label for="miluim"><b>אני מילואימניק/ית 🪖</b> — אני מצהיר/ה ששירתתי במילואים במהלך המלחמה. <span class="req">*</span></label>
+                </div>
+
+                <!-- התקנון הרשמי — המקור: תקנון_הרשמה_ליריד_העסקים_N12_שווים_יותר.docx (09.08.26).
+                     שינויי נוסח בתקנון = רק בתיאום עם טום -->
+                <div class="takanon field--full">
+                  <h4>תקנון הרשמה ליריד העסקים</h4>
+                  <div class="takanon__box" tabindex="0" role="region" aria-label="תקנון הרשמה ליריד העסקים">
+                    <h5>1. כללי</h5>
+                    <p>1.1. יריד העסקים (להלן: "היריד") נערך בשיתוף N12, ומטרתו לקדם, לחשוף ולתת במה לעסקים המשתתפים בו.</p>
+                    <p>1.2. הליך הרישום והגשת המועמדות ליריד מבוצע ומנוהל על ידי שווים יותר ר.מ.י.ד בע"מ (להלן: "החברה").</p>
+                    <p>1.3. תקנון זה מסדיר את תנאי הרישום, הגשת המועמדות, בחירת העסקים והשתתפותם ביריד.</p>
+                    <p>1.4. הגשת מועמדות ליריד מהווה אישור כי המועמד קרא את הוראות תקנון זה, הבין אותן והסכים להן.</p>
+                    <h5>2. הגשת המועמדות</h5>
+                    <p>2.1. במסגרת ההרשמה יידרש המועמד למסור פרטים ומידע אודותיו ואודות העסק, ככל שיידרשו לצורך בחינת המועמדות והתאמת העסק ליריד.</p>
+                    <p>2.2. המועמד מצהיר כי הפרטים והמידע שמסר במסגרת ההרשמה נכונים, מלאים ומדויקים.</p>
+                    <p>2.3. החברה ו/או מי מטעמה יהיו רשאים לפנות למועמד לצורך השלמת פרטים, קבלת הבהרות או בחינת המועמדות.</p>
+                    <h5>3. בחירת העסקים</h5>
+                    <p>3.1. מילוי ושליחת טופס ההרשמה מהווים הגשת מועמדות בלבד ואינם מקנים זכות להשתתף ביריד.</p>
+                    <p>3.2. מספר העסקים שיוכלו להשתתף ביריד מוגבל. בחירת העסקים תיעשה בהתאם לשיקולים מקצועיים ולצורכי היריד, לרבות התאמת העסק לאופי היריד, המוצרים או השירותים המוצעים, גיוון בין תחומי הפעילות ומגבלות מקום והפקה.</p>
+                    <p>3.3. החברה ו/או הגורמים המעורבים בהפקת היריד יהיו רשאים לאשר או שלא לאשר מועמדות בהתאם לשיקולים האמורים ולצורכי היריד.</p>
+                    <p>3.4. הגשת מועמדות אינה מהווה התחייבות מצד החברה, N12 או מי מטעמם לקבל את המועמד ליריד, להקצות לו דוכן או להעניק לו פרסום, סיקור, חשיפה או הטבה מכל סוג.</p>
+                    <p>3.5. הודעה בדבר קבלה והמשך תהליך ההשתתפות תימסר לעסקים שנבחרו באמצעות פרטי הקשר שנמסרו בעת ההרשמה.</p>
+                    <h5>4. השתתפות ביריד</h5>
+                    <p>4.1. עסק שנבחר להשתתף ביריד מתחייב לפעול בהתאם להנחיות שיימסרו לו על ידי הגורמים המארגנים, לרבות לעניין מועדי הגעה, הקמה ופירוק, מיקום, שילוט, הצגת מוצרים, בטיחות והתנהלות במהלך היריד.</p>
+                    <p>4.2. העסק יהיה אחראי למוצרים ולשירותים שיוצגו, יוצעו או יימכרו על ידו במסגרת היריד, לרבות איכותם, תקינותם, חוקיותם, מחיריהם, האחריות לגביהם ועמידתם בהוראות כל דין.</p>
+                    <p>4.3. אין בעצם בחירתו או השתתפותו של עסק ביריד משום המלצה, אישור או מצג מצד החברה או N12 ביחס לעסק, לבעליו, למוצריו או לשירותיו.</p>
+                    <h5>5. צילום, פרסום וחשיפה</h5>
+                    <p>5.1. המועמד מודע לכך שהיריד עשוי להיות מצולם, מתועד ומסוקר במסגרת פעילות תקשורתית, שיווקית ודיגיטלית הקשורה ליריד.</p>
+                    <p>5.2. עסק שנבחר להשתתף ביריד מאשר כי במסגרת תיעוד וסיקור היריד עשויים להופיע, בין היתר, שם העסק, הלוגו, הדוכן, המוצרים ונציגי העסק, בכפוף להוראות כל דין.</p>
+                    <p>5.3. אין התחייבות להיקף מסוים של צילום, סיקור, פרסום או חשיפה של עסק כלשהו, ואין בהשתתפות ביריד כדי להבטיח הופעה בשידור, בכתבה, באתר, ברשתות החברתיות או בכל אמצעי תקשורת אחר.</p>
+                    <h5>6. שינויים וביטול</h5>
+                    <p>6.1. החברה ו/או הגורמים המארגנים יהיו רשאים לבצע שינויים במועד, במיקום, במתכונת, בתוכן או בתנאי היריד בשל אילוצים הפקתיים, ביטחוניים, תפעוליים או נסיבות אחרות המצדיקות זאת.</p>
+                    <p>6.2. החברה ו/או הגורמים המארגנים יהיו רשאים לבטל את היריד או את השתתפותו של עסק מסוים, ככל שהדבר נדרש בהתאם לנסיבות ולצורכי ההפקה.</p>
+                    <p>6.3. במקרה של שינוי או ביטול כאמור, לא תהיה למועמד או למשתתף טענה או דרישה בגין עצם השינוי או הביטול, בכפוף להוראות כל דין.</p>
+                    <h5>7. פרטיות ושימוש במידע</h5>
+                    <p>7.1. הליך הרישום מנוהל על ידי החברה. לצורך ניהול ההרשמה והתקשרות עם המועמדים, יישמרו על ידי החברה פרטי הקשר הבאים בלבד: שם מלא, כתובת דואר אלקטרוני ומספר טלפון.</p>
+                    <p>7.2. לא יישמר במאגר המידע המשמש לצורך ההרשמה ליריד מידע נוסף אודות המועמד, ובכלל זה מידע בעל רגישות מיוחדת כהגדרתו בדין.</p>
+                    <p>7.3. פרטי הקשר האמורים ישמשו לצורך ניהול ההרשמה, בחינת המועמדות, יצירת קשר עם המועמדים וניהול ההשתתפות ביריד.</p>
+                    <p>7.4. ככל שיימסר במסגרת הליך ההרשמה מידע נוסף לצורך בחינת העסק או התאמתו ליריד, מידע זה לא יישמר במאגר המידע לאחר השלמת הבחינה, אלא אם שמירתו נדרשת על פי דין.</p>
+                    <p>7.5. פרטי הקשר לא ישמשו לצורך משלוח דברי פרסומת או דיוור שיווקי מכוח הרשמה זו בלבד, אלא ככל שניתנה לכך הסכמה נפרדת ובהתאם להוראות הדין.</p>
+                    <p>7.6. המידע יישמר ויעובד בהתאם להוראות חוק הגנת הפרטיות, התשמ"א-1981, התקנות מכוחו וכל דין רלוונטי.</p>
+                    <h5>8. הוראות כלליות</h5>
+                    <p>8.1. החברה ו/או הגורמים המארגנים רשאים לעדכן את הוראות תקנון זה ככל שיידרש ובהתאם להוראות הדין.</p>
+                    <p>8.2. בכל מקרה של סתירה בין פרסום כללי ביחס ליריד לבין הוראות תקנון זה, יגברו הוראות התקנון, אלא אם צוין במפורש אחרת.</p>
+                    <p>8.3. הדין החל על תקנון זה ועל הרישום וההשתתפות ביריד הוא דין מדינת ישראל.</p>
+                    <p>8.4. פרטי היריד, לרבות מועדו, מיקומו והנחיות תפעוליות נוספות, יימסרו או יפורסמו בנפרד על ידי הגורמים המארגנים.</p>
+                    <p>8.5. בעצם הגשת טופס המועמדות מאשר המועמד כי קרא את התקנון, הבין את הוראותיו ומסכים להן.</p>
+                  </div>
+                </div>
+
+                <div class="consent" id="consentWrap">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  <label for="consent">אני מאשר/ת כי ידוע לי שהרישום ליריד מנוהל על ידי חברת שווים יותר ר.מ.י.ד בע"מ, וכי עצם ההרשמה אינה מהווה אישור להשתתפות ביריד. בחינת הבקשות ובחירת המציגים תיעשה על ידי הפקת היריד הרלוונטי (עיריית ירושלים, עיריית חיפה, חברת נמל יפו או חברת סינמה סיטי באר שבע), בהתאם לשיקול דעתה. <span class="req">*</span></label>
+                </div>
+
+                <!-- הסכמת דיוור נפרדת (רשות) — נדרשת לפי סעיף 7.5 בתקנון כדי לשלוח
+                     עדכוני קהילה; מקושרת לשדה "אישור דיוור" בפיירברי (החלטת טום 09.08) -->
+                <div class="consent consent--optional" id="newsletterWrap">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <label for="newsletter">אשמח לקבל עדכונים, הטבות והזדמנויות מקהילת שווים יותר <span class="opt-tag">(רשות)</span></label>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit" class="btn btn-main btn-lg" id="submitBtn">שליחת הרשמה ליריד&nbsp;←</button>
+                  <p class="form-msg" id="formMsg" role="status"></p>
+                  <p class="form-note">🪖 אחרי השליחה תקבלו <b>הודעת וואטסאפ לאימות שירות המילואים</b></p>
+                  <p class="form-privacy">הפרטים נשמרים במערכת של קהילת שווים יותר ומשמשים לצורך ההרשמה לירידים בלבד.</p>
+                </div>
+              </div>
+            </form>
+
+            <!-- success state — replaces the form after a good submit -->
+            <div class="success on-light" id="formSuccess" tabindex="-1" hidden>
+              <div class="success__check" aria-hidden="true">♥</div>
+              <h3 class="display">ההרשמה נקלטה. <span class="accent">תודה!</span></h3>
+              <p>בזמן הקרוב תישלח למספר שמסרתם <b>הודעת וואטסאפ לאימות שירות המילואים</b>.</p>
+              <p>לאחר האימות, הבקשה תועבר להפקת היריד הרלוונטי — ואם העסק שלכם ייבחר להציג, ניצור איתכם קשר עם כל הפרטים.</p>
+              <a class="btn btn-line" href="https://wa.me/972587929195" target="_blank" rel="noopener">יש שאלה? דברו איתנו בוואטסאפ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__cta">
+        <h2 class="display rv">אתם התגייסתם למעננו,<br>עכשיו תורנו <span class="accent">להתגייס למענכם.</span></h2>
+        <a class="btn btn-main btn-lg" href="#register">אני רוצה להירשם</a>
+      </div>
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <span class="brand__name">שווים יותר<b>.</b></span>
+          <p>הקהילה של משרתי המילואים וכוחות הביטחון.</p>
+        </div>
+        <div class="footer__col">
+          <h3>יריד הלב בשיתוף</h3>
+          <p>ערוץ 12 — N12</p>
+          <p>חברת נמל יפו · עיריית ירושלים</p>
+          <p>סינמה סיטי באר שבע · עיריית חיפה</p>
+        </div>
+        <div class="footer__col">
+          <h3>דברו איתנו</h3>
+          <p><a href="https://wa.me/972587929195" target="_blank" rel="noopener">וואטסאפ: 058-792-9195</a></p>
+          <p><a href="mailto:shavimyoter2024@gmail.com">shavimyoter2024@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer__base">
+        <span>© 2026 שווים יותר ר.מ.י.ד בע"מ · כל הזכויות שמורות</span>
+        <span>יריד הלב עם המילואימניקים · ההרשמה למציגים פתוחה</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>מזון<i>♥</i></span><span>חקלאות<i>♥</i></span><span>עיצוב<i>♥</i></span><span>אופנה<i>♥</i></span><span>אוכל מוכן<i>♥</i></span><span>לייף סטייל<i>♥</i></span><span>אמנות<i>♥</i></span><span>מתן שירותים<i>♥</i></span><span>טיפוח<i>♥</i></span><span>מתנות<i>♥</i></span>
+      <span>מזון<i>♥</i></span><span>חקלאות<i>♥</i></span><span>עיצוב<i>♥</i></span><span>אופנה<i>♥</i></span><span>אוכל מוכן<i>♥</i></span><span>לייף סטייל<i>♥</i></span><span>אמנות<i>♥</i></span><span>מתן שירותים<i>♥</i></span><span>טיפוח<i>♥</i></span><span>מתנות<i>♥</i></span>
+    </div>
+  </div>
+
+  <div class="mobile-cta"><a class="btn btn-main" href="#register">אני רוצה להירשם</a></div>
+
+  <script>
+    (function () {
+      // topbar
+      var tb = document.querySelector(".topbar");
+      var onScroll = function () { tb.classList.toggle("scrolled", window.scrollY > 10); };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // scroll reveals
+      var rvs = document.querySelectorAll(".rv");
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        rvs.forEach(function (el) { io.observe(el); });
+      } else {
+        rvs.forEach(function (el) { el.classList.add("in"); });
+      }
+
+      // birthdate can't be in the future
+      var bd = document.getElementById("birthdate");
+      if (bd) { try { bd.max = new Date().toISOString().slice(0, 10); } catch (e) {} }
+
+      // ═══ overlay ההרשמה — נפתח דרך ‎#register (עובד גם בלי JS דרך :target) ═══
+      var syncOverlay = function () {
+        var open = window.location.hash === "#register";
+        document.body.classList.toggle("modal-open", open);
+        if (open) {
+          var ov = document.getElementById("register");
+          if (ov) ov.scrollTop = 0;
+          var f = document.getElementById("firstname");
+          if (f && !f.closest("form").hidden) setTimeout(function () { f.focus({ preventScroll: true }); }, 80);
+        }
+      };
+      window.addEventListener("hashchange", syncOverlay);
+      syncOverlay(); // קישור ישיר עם ‎#register פותח את הטופס כבר בטעינה
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape" && window.location.hash === "#register") window.location.hash = "#top";
+      });
+
+      // Distributor attribution — same forgiving reader as the course pages:
+      // utm_source/utm_medium from the query, plus params pasted after the #
+      // (e.g. /#register?source=...) and the bare source/medium shorthand.
+      var utm = { source: "", medium: "" };
+      try {
+        var qs = new URLSearchParams(window.location.search);
+        try {
+          var hq = (window.location.hash.split("?")[1] || "");
+          if (hq) new URLSearchParams(hq).forEach(function (v, k) { if (!qs.has(k)) qs.set(k, v); });
+        } catch (e2) {}
+        utm.source = (qs.get("utm_source") || qs.get("source") || "").slice(0, 60);
+        utm.medium = (qs.get("utm_medium") || qs.get("medium") || "").slice(0, 60);
+      } catch (e) {}
+
+      // ═══ registration form → Make ═══
+      // webhook ייעודי של תרחיש ‎#9636410 "יריד הלב — הרשמות מדף הנחיתה" (נוצר 09.08.26):
+      // מאסטר-שיטס + טאב לפי יריד (הקובץ של ההפקות) + איש קשר בפיירברי + וואטסאפ.
+      var FORM_WEBHOOK_URL = "https://hook.eu2.make.com/70703m9bphjngt6ueurxcay95xuzr4pa";
+      var PAGE_ID = "yarid-miluim";
+
+      var form = document.getElementById("yaridForm");
+      var msg = document.getElementById("formMsg");
+      var btn = document.getElementById("submitBtn");
+      var success = document.getElementById("formSuccess");
+      if (!form) return;
+
+      var mark = function (el, bad) {
+        var wrap = el.closest(".field") || el.closest(".consent");
+        if (wrap) wrap.classList.toggle("bad", bad);
+        try { el.setAttribute("aria-invalid", bad ? "true" : "false"); } catch (e2) {}
+      };
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        msg.classList.remove("err");
+        msg.textContent = "";
+
+        var val = function (name) { return (form[name] && form[name].value || "").trim(); };
+        // normalize +972 / 972 prefixes to the local 0-prefixed form before validating
+        var phone = val("phone").replace(/[\s\-()]/g, "").replace(/^\+?972/, "0");
+
+        var checks = [
+          [form.firstname,     !!val("firstname")],
+          [form.lastname,      !!val("lastname")],
+          [form.email,         /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("email"))],
+          [form.phone,         /^0\d{8,9}$/.test(phone)],
+          [form.birthdate,     !!val("birthdate")],
+          [form.city,          !!val("city")],
+          [form.business_type, !!val("business_type")],
+          [form.business_name, !!val("business_name")],
+          [form.yarid,         !!val("yarid")],
+          [form.offering,      !!val("offering")],
+          [form.story,         !!val("story")],
+          [form.miluim,        form.miluim.checked],
+          [form.consent,       form.consent.checked]
+        ];
+        var firstBad = null;
+        checks.forEach(function (c) {
+          mark(c[0], !c[1]);
+          if (!c[1] && !firstBad) firstBad = c[0];
+        });
+        if (firstBad) {
+          msg.classList.add("err");
+          msg.textContent = firstBad === form.phone ? "בדקו שמספר הטלפון תקין (למשל 050-1234567) ונסו שוב."
+                          : firstBad === form.email ? "בדקו שכתובת המייל תקינה ונסו שוב."
+                          : firstBad === form.miluim ? "ההרשמה מיועדת למשרתי ומשרתות מילואים — יש לסמן את ההצהרה."
+                          : firstBad === form.consent ? "כדי להירשם צריך לאשר את התקנון בתחתית הטופס."
+                          : "יש להשלים את שדות החובה המסומנים.";
+          firstBad.closest(".field, .consent").scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+
+        // honeypot: bots fill hidden fields — pretend it worked, send nothing
+        if (val("hp_website")) {
+          form.hidden = true; success.hidden = false;
+          return;
+        }
+
+        btn.disabled = true;
+        msg.textContent = "ההרשמה נשלחת…";
+
+        var body = new URLSearchParams({
+          type: "yarid-registration",
+          page: PAGE_ID,
+          firstname: val("firstname"),
+          lastname: val("lastname"),
+          email: val("email"),
+          phone: phone,
+          birthdate: val("birthdate"),
+          city: val("city"),
+          business_type: val("business_type"),
+          business_name: val("business_name"),
+          yarid: val("yarid"),
+          offering: val("offering"),
+          links: val("links"),
+          story: val("story"),
+          miluim: "כן",
+          consent: "כן",
+          newsletter: form.newsletter.checked ? "כן" : "לא",
+          utm_source: utm.source,
+          utm_medium: utm.medium,
+          client_time: new Date().toISOString()
+        });
+
+        // NOTE: no-cors resolves on ANY response (even 4xx/5xx) — .then does not
+        // prove Make accepted the registration. Verify the scenario end-to-end
+        // with a real test submission before going live.
+        fetch(FORM_WEBHOOK_URL, {
+          method: "POST", mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString()
+        }).then(function () {
+          form.hidden = true;
+          success.hidden = false;
+          try { success.focus({ preventScroll: true }); } catch (e3) {}
+          success.scrollIntoView({ behavior: "smooth", block: "center" });
+        }).catch(function () {
+          btn.disabled = false;
+          msg.classList.add("err");
+          msg.textContent = "משהו השתבש בשליחה. נסו שוב, או כתבו לנו בוואטסאפ: 058-792-9195";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
