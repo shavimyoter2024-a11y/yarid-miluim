@@ -298,11 +298,28 @@
     }
     .overlay .ticket { margin-inline: auto; }
 
-    /* takanon scroll box */
-    .takanon h4 { font-family: "Heebo", sans-serif; font-weight: 800; font-size: 15px; color: var(--ink); margin: 0 0 8px; }
+    /* takanon — כפתור סגור שנפתח ל"קרא עוד" */
+    .takanon__details {
+      border: 1px solid var(--line-ink); border-radius: 14px; background: #fff; overflow: hidden;
+    }
+    .takanon__details summary {
+      list-style: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 14px 18px; transition: background .2s;
+    }
+    .takanon__details summary::-webkit-details-marker { display: none; }
+    .takanon__details summary:hover { background: rgba(54,59,38,.045); }
+    .takanon__title { font-family: "Heebo", sans-serif; font-weight: 800; font-size: 14.5px; color: var(--ink); }
+    .takanon__more {
+      flex: 0 0 auto; color: var(--red); font-weight: 700; font-size: 13.5px;
+      border-bottom: 1.5px dashed rgba(222,50,38,.5); padding-bottom: 1px;
+    }
+    .takanon__details .when-open { display: none; }
+    .takanon__details[open] .when-open { display: inline; }
+    .takanon__details[open] .when-closed { display: none; }
     .takanon__box {
       max-height: 250px; overflow-y: auto; padding: 16px 18px;
-      border: 1px solid var(--line-ink); border-radius: 14px; background: #fff;
+      border-top: 1px solid var(--line-ink); background: #fff;
       font-size: 13.5px; color: var(--muted-ink); line-height: 1.66;
     }
     .takanon__box h5 { font-size: 13.5px; font-weight: 800; color: var(--ink); margin: 14px 0 4px; }
@@ -873,8 +890,13 @@
                 <!-- התקנון הרשמי — המקור: תקנון_הרשמה_ליריד_העסקים_N12_שווים_יותר.docx (09.08.26).
                      שינויי נוסח בתקנון = רק בתיאום עם טום -->
                 <div class="takanon field--full">
-                  <h4>תקנון הרשמה ליריד העסקים</h4>
-                  <div class="takanon__box" tabindex="0" role="region" aria-label="תקנון הרשמה ליריד העסקים">
+                  <!-- סגור כברירת מחדל לבקשת טום (09.08) — נפתח רק בלחיצה על "קרא עוד" -->
+                  <details class="takanon__details">
+                    <summary>
+                      <span class="takanon__title">📜 תקנון הרשמה ליריד העסקים</span>
+                      <span class="takanon__more"><span class="when-closed">קרא עוד</span><span class="when-open">סגירה</span></span>
+                    </summary>
+                    <div class="takanon__box" tabindex="0" role="region" aria-label="תקנון הרשמה ליריד העסקים">
                     <h5>1. כללי</h5>
                     <p>1.1. יריד העסקים (להלן: "היריד") נערך בשיתוף N12, ומטרתו לקדם, לחשוף ולתת במה לעסקים המשתתפים בו.</p>
                     <p>1.2. הליך הרישום והגשת המועמדות ליריד מבוצע ומנוהל על ידי שווים יותר ר.מ.י.ד בע"מ (להלן: "החברה").</p>
@@ -915,7 +937,8 @@
                     <p>8.3. הדין החל על תקנון זה ועל הרישום וההשתתפות ביריד הוא דין מדינת ישראל.</p>
                     <p>8.4. פרטי היריד, לרבות מועדו, מיקומו והנחיות תפעוליות נוספות, יימסרו או יפורסמו בנפרד על ידי הגורמים המארגנים.</p>
                     <p>8.5. בעצם הגשת טופס המועמדות מאשר המועמד כי קרא את התקנון, הבין את הוראותיו ומסכים להן.</p>
-                  </div>
+                    </div>
+                  </details>
                 </div>
 
                 <div class="consent" id="consentWrap">
