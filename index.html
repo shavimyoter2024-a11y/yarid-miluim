@@ -887,6 +887,26 @@
                   <label for="miluim"><b>אני מילואימניק/ית 🪖</b> — אני מצהיר/ה ששירתתי במילואים במהלך המלחמה. <span class="req">*</span></label>
                 </div>
 
+
+                <div class="consent" id="consentWrap">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  <label for="consent">אני מאשר/ת כי ידוע לי שהרישום ליריד מנוהל על ידי חברת שווים יותר ר.מ.י.ד בע"מ, וכי עצם ההרשמה אינה מהווה אישור להשתתפות ביריד. בחינת הבקשות ובחירת המציגים תיעשה על ידי הפקת היריד הרלוונטי (עיריית ירושלים, עיריית חיפה, חברת נמל יפו או חברת סינמה סיטי באר שבע), בהתאם לשיקול דעתה. <span class="req">*</span></label>
+                </div>
+
+                <!-- הסכמת דיוור נפרדת (רשות) — נדרשת לפי סעיף 7.5 בתקנון כדי לשלוח
+                     עדכוני קהילה; מקושרת לשדה "אישור דיוור" בפיירברי (החלטת טום 09.08) -->
+                <div class="consent consent--optional" id="newsletterWrap">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <label for="newsletter">אשמח לקבל עדכונים, הטבות והזדמנויות מקהילת שווים יותר <span class="opt-tag">(רשות)</span></label>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit" class="btn btn-main btn-lg" id="submitBtn">שליחת הרשמה ליריד&nbsp;←</button>
+                  <p class="form-msg" id="formMsg" role="status"></p>
+                  <p class="form-note">🪖 אחרי השליחה תקבלו <b>הודעת וואטסאפ לאימות שירות המילואים</b></p>
+                  <p class="form-privacy">הפרטים נשמרים במערכת של קהילת שווים יותר ומשמשים לצורך ההרשמה לירידים בלבד.</p>
+                </div>
+
                 <!-- התקנון הרשמי — המקור: תקנון_הרשמה_ליריד_העסקים_N12_שווים_יותר.docx (09.08.26).
                      שינויי נוסח בתקנון = רק בתיאום עם טום -->
                 <div class="takanon field--full">
@@ -939,25 +959,6 @@
                     <p>8.5. בעצם הגשת טופס המועמדות מאשר המועמד כי קרא את התקנון, הבין את הוראותיו ומסכים להן.</p>
                     </div>
                   </details>
-                </div>
-
-                <div class="consent" id="consentWrap">
-                  <input type="checkbox" id="consent" name="consent" required />
-                  <label for="consent">אני מאשר/ת כי ידוע לי שהרישום ליריד מנוהל על ידי חברת שווים יותר ר.מ.י.ד בע"מ, וכי עצם ההרשמה אינה מהווה אישור להשתתפות ביריד. בחינת הבקשות ובחירת המציגים תיעשה על ידי הפקת היריד הרלוונטי (עיריית ירושלים, עיריית חיפה, חברת נמל יפו או חברת סינמה סיטי באר שבע), בהתאם לשיקול דעתה. <span class="req">*</span></label>
-                </div>
-
-                <!-- הסכמת דיוור נפרדת (רשות) — נדרשת לפי סעיף 7.5 בתקנון כדי לשלוח
-                     עדכוני קהילה; מקושרת לשדה "אישור דיוור" בפיירברי (החלטת טום 09.08) -->
-                <div class="consent consent--optional" id="newsletterWrap">
-                  <input type="checkbox" id="newsletter" name="newsletter" />
-                  <label for="newsletter">אשמח לקבל עדכונים, הטבות והזדמנויות מקהילת שווים יותר <span class="opt-tag">(רשות)</span></label>
-                </div>
-
-                <div class="form-submit">
-                  <button type="submit" class="btn btn-main btn-lg" id="submitBtn">שליחת הרשמה ליריד&nbsp;←</button>
-                  <p class="form-msg" id="formMsg" role="status"></p>
-                  <p class="form-note">🪖 אחרי השליחה תקבלו <b>הודעת וואטסאפ לאימות שירות המילואים</b></p>
-                  <p class="form-privacy">הפרטים נשמרים במערכת של קהילת שווים יותר ומשמשים לצורך ההרשמה לירידים בלבד.</p>
                 </div>
               </div>
             </form>
