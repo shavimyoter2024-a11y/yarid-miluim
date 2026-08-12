@@ -176,41 +176,25 @@
 
     .hero__cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 38px; }
 
-    /* ── מדבקת הקמפיין — שחזור CSS של הפוסטר ── */
+    /* ── מדבקת הקמפיין — הלוגו הרשמי (ההטיה, המסגרת והצל אפויים בתמונה) ── */
     .sticker {
-      margin: 0; background: #fbf6e7; padding: 15px; border-radius: 26px;
-      box-shadow: 0 34px 70px -28px rgba(15,18,7,.65), 0 6px 18px -8px rgba(15,18,7,.35);
-      transform: rotate(-7deg);
-      width: min(400px, 86vw);
+      margin: 0;
+      width: min(430px, 88vw);
+      filter: drop-shadow(0 26px 44px rgba(15,18,7,.45));
     }
-    .sticker__inner {
-      background: var(--olive-deep); border-radius: 14px; padding: 34px 26px 30px;
-      text-align: center; overflow: hidden;
-    }
-    .sticker__title {
-      display: block; font-family: "Heebo", sans-serif; font-weight: 900;
-      font-size: clamp(44px, 4.6vw, 62px); line-height: 1; letter-spacing: -.02em;
-      color: var(--khaki);
-    }
-    .sticker__title .heart { color: var(--red); }
-    .sticker__bar {
-      display: inline-block; margin-top: 16px; background: var(--khaki); color: var(--ink);
-      font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(21px, 2vw, 27px);
-      padding: 6px 16px 8px; border-radius: 4px; transform: rotate(-1.5deg);
-    }
-    .sticker__redline { display: block; width: 56%; height: 9px; background: var(--red); margin: 14px auto 0; border-radius: 2px; transform: rotate(-1.5deg); }
+    .sticker img { display: block; width: 100%; height: auto; }
     /* דסקטופ רחב: המדבקה צפה בצד הפנוי של ה-hero */
     @media (min-width: 1180px) {
       .sticker { position: absolute; z-index: 2; inset-inline-end: 4vw; top: 24%; }
     }
     @media (max-width: 1179.98px) {
-      .sticker { align-self: center; margin-top: 42px; transform: rotate(-4deg); }
+      .sticker { align-self: center; margin-top: 42px; }
     }
 
     /* CSS-only entrance — staggered rise-in on load (motion runs for everyone,
        same call as the course pages: the animations ARE part of the product) */
     @keyframes riseIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
-    @keyframes stickIn { from { opacity: 0; transform: rotate(-7deg) scale(.85); } to { opacity: 1; } }
+    @keyframes stickIn { from { opacity: 0; transform: scale(.88) translateY(14px); } to { opacity: 1; transform: none; } }
     @keyframes markIn { from { opacity: 0; } to { opacity: 1; } }
     body.js .hero .eyebrow,
     body.js .hero__title .line > span,
@@ -658,13 +642,9 @@
           <a class="btn btn-line" href="#cities">איפה ומתי?&nbsp;↓</a>
         </div>
 
-        <!-- שחזור CSS של מדבקת הקמפיין מהגרפיקה הרשמית -->
+        <!-- הלוגו הרשמי של הקמפיין (חולץ מ-new.psd, 11.08.26) -->
         <figure class="sticker" aria-hidden="true">
-          <div class="sticker__inner">
-            <span class="sticker__title">יריד ה<span class="heart">♥</span></span>
-            <span class="sticker__bar">עם המילואימניקים</span>
-            <span class="sticker__redline"></span>
-          </div>
+          <img src="assets/logo-yarid.webp" alt="" width="1200" height="737" decoding="async">
         </figure>
       </div>
 
