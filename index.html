@@ -337,6 +337,25 @@
       box-shadow: 0 14px 30px -14px rgba(222,50,38,.6);
     }
 
+    /* פס לוגואי השותפים — עיריות ומתחמים, מהפוסטר הרשמי */
+    .partners {
+      margin: 30px 0 0; background: var(--cream); border-radius: 18px;
+      padding: 24px 28px;
+      display: grid; grid-template-columns: repeat(2, auto);
+      gap: 20px 34px; align-items: center; justify-items: center;
+      max-width: fit-content;
+      box-shadow: 0 24px 50px -30px rgba(15,18,7,.55);
+    }
+    .partners img { height: 58px; width: auto; display: block; }
+    @media (min-width: 1120px) {
+      .cities-head { display: flex; align-items: center; justify-content: space-between; gap: 44px; }
+      .cities-head .partners { margin: 0; flex-shrink: 0; }
+    }
+    @media (max-width: 480px) {
+      .partners { padding: 18px 20px; gap: 16px 24px; }
+      .partners img { height: 44px; }
+    }
+
     /* cities / venues — כרטיסי קרם על הזית */
     .city-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
     @media (max-width: 1080px) { .city-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
@@ -661,15 +680,24 @@
     <!-- WHERE & WHEN -->
     <section class="section" id="cities">
       <div class="wrap">
-        <div class="section__head rv">
-          <p class="eyebrow">איפה ומתי</p>
-          <h2 class="section__title display">4 ירידים. <span class="accent">אלפי מבקרים.</span></h2>
-          <p class="section__lead">
-            זו ההזמנה שלכם.ן להציג את העסק שלכם בפני אלפי מבקרים בירידים שיתקיימו
-            במהלך חודש ספטמבר ברחבי הארץ, בשיתוף <b>נמל יפו, עיריית ירושלים,
-            סינמה סיטי באר שבע ועיריית חיפה</b>.
-          </p>
-          <span class="free-badge">♥ הכניסה למבקרים חופשית</span>
+        <div class="section__head rv cities-head">
+          <div class="cities-head__text">
+            <p class="eyebrow">איפה ומתי</p>
+            <h2 class="section__title display">4 ירידים. <span class="accent">אלפי מבקרים.</span></h2>
+            <p class="section__lead">
+              זו ההזמנה שלכם.ן להציג את העסק שלכם בפני אלפי מבקרים בירידים שיתקיימו
+              במהלך חודש ספטמבר ברחבי הארץ, בשיתוף <b>נמל יפו, עיריית ירושלים,
+              סינמה סיטי באר שבע ועיריית חיפה</b>.
+            </p>
+            <span class="free-badge">♥ הכניסה למבקרים חופשית</span>
+          </div>
+          <!-- הלוגואים הרשמיים מפס השותפים בפוסטר (בלי שווים יותר) -->
+          <figure class="partners">
+            <img src="assets/logo-cinema.webp" alt="סינמה סיטי באר שבע" width="444" height="320" loading="lazy" decoding="async">
+            <img src="assets/logo-jerusalem.webp" alt="עיריית ירושלים" width="643" height="320" loading="lazy" decoding="async">
+            <img src="assets/logo-haifa.webp" alt="עיריית חיפה" width="698" height="320" loading="lazy" decoding="async">
+            <img src="assets/logo-yafo.webp" alt="נמל יפו" width="627" height="320" loading="lazy" decoding="async">
+          </figure>
         </div>
         <div class="city-grid">
           <div class="city-card rv" style="--d:.05s">
