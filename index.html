@@ -806,7 +806,7 @@
               "יריד הלב — הרשמות מדף הנחיתה", שכותב ל:
                 • גיליון המאסטר "הרשמות יריד הלב - כל הנרשמים" (כל השדות)
                 • טאב היריד הרלוונטי בקובץ ההפקות (לפי שדה "לאיזה יריד")
-                • פיירברי: איש קשר (שם/טלפון/מייל/לידה/מגורים/UTM/דיוור)
+                • פיירברי: איש קשר (שם/טלפון/מייל/מגורים/UTM/דיוור)
                 • וואטסאפ: מנוי מאני-צ'אט + ה-flow הקיים של הודעת היריד
               פרטים מלאים: make-wiring.md. ⚠️ לא לשנות את שמות השדות (name=)
               בלי לעדכן את התרחיש — המיפוי ב-Make תלוי בהם.
@@ -830,10 +830,6 @@
                   <label for="phone">טלפון <span class="req">*</span></label>
                   <input type="tel" id="phone" name="phone" class="ltr" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="050-1234567" aria-describedby="phoneHint" required />
                   <span class="field__hint" id="phoneHint">למספר הזה תישלח הודעת האישור בוואטסאפ</span>
-                </div>
-                <div class="field">
-                  <label for="birthdate">תאריך לידה <span class="req">*</span></label>
-                  <input type="date" id="birthdate" name="birthdate" autocomplete="bday" min="1920-01-01" max="2026-08-08" required />
                 </div>
                 <div class="field">
                   <label for="city">מקום מגורים <span class="req">*</span></label>
@@ -977,7 +973,7 @@
               <h3 class="display">ההרשמה נקלטה. <span class="accent">תודה!</span></h3>
               <p>בזמן הקרוב תישלח למספר שמסרתם <b>הודעת אישור בוואטסאפ</b>.</p>
               <p><b>שימו לב:</b> קבלת אישור על ההרשמה אינה מהווה אישור להשתתפות ביריד.</p>
-              <p>הבקשה תועבר להפקת היריד הרלוונטי — ואם העסק שלכם יימצא מתאים, תקבלו פנייה מההפקה לאימות ובחינת התאמה סופית, עם כל הפרטים.</p>
+              <p>הבקשה תועבר להפקת היריד הרלוונטי ואם העסק שלכם יימצא מתאים, תקבלו פנייה מההפקה לאימות ובחינת התאמה סופית, עם כל הפרטים.</p>
               <a class="btn btn-line" href="https://wa.me/972587929195" target="_blank" rel="noopener">יש שאלה? דברו איתנו בוואטסאפ</a>
             </div>
           </div>
@@ -1046,10 +1042,6 @@
         rvs.forEach(function (el) { el.classList.add("in"); });
       }
 
-      // birthdate can't be in the future
-      var bd = document.getElementById("birthdate");
-      if (bd) { try { bd.max = new Date().toISOString().slice(0, 10); } catch (e) {} }
-
       // ═══ overlay ההרשמה — נפתח דרך ‎#register (עובד גם בלי JS דרך :target) ═══
       var syncOverlay = function () {
         var open = window.location.hash === "#register";
@@ -1113,7 +1105,6 @@
           [form.lastname,      !!val("lastname")],
           [form.email,         /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("email"))],
           [form.phone,         /^0\d{8,9}$/.test(phone)],
-          [form.birthdate,     !!val("birthdate")],
           [form.city,          !!val("city")],
           [form.business_type, !!val("business_type")],
           [form.business_name, !!val("business_name")],
@@ -1154,7 +1145,6 @@
           lastname: val("lastname"),
           email: val("email"),
           phone: phone,
-          birthdate: val("birthdate"),
           city: val("city"),
           business_type: val("business_type"),
           business_name: val("business_name"),
