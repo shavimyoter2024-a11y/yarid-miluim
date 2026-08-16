@@ -1179,5 +1179,28 @@
       });
     })();
   </script>
+
+  <!-- מונה כניסות אנונימי — תרחיש Make ‎#9666603 כותב לטאב "כניסות לדף" במאסטר.
+       נספר ביקור אחד ביום לכל דפדפן (localStorage) כדי לחסוך פעולות Make.
+       בלי שום מידע אישי: רק זמן, utm, referrer וחדש/חוזר. -->
+  <script>
+    (function () {
+      try {
+        var day = "yh_seen_" + new Date().toISOString().slice(0, 10);
+        if (localStorage.getItem(day)) return;
+        localStorage.setItem(day, "1");
+        var visitor = localStorage.getItem("yh_ever") ? "חוזר" : "חדש";
+        localStorage.setItem("yh_ever", "1");
+        var q = new URLSearchParams(location.search);
+        var data = new FormData();
+        data.append("type", "pageview");
+        data.append("utm_source", q.get("utm_source") || "");
+        data.append("utm_medium", q.get("utm_medium") || "");
+        data.append("referrer", document.referrer || "");
+        data.append("visitor", visitor);
+        navigator.sendBeacon("https://hook.eu2.make.com/kuk5ook331qsqtyls42k9qt7tvkmqbe4", data);
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>
