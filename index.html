@@ -173,6 +173,12 @@
       color: var(--muted); font-weight: 400; line-height: 1.6;
     }
     .hero__sub b { color: var(--khaki); font-weight: 700; }
+    /* שורת הפתיחה של קהל היעד — תמיד בשורה נפרדת מעל המשפט */
+    .hero__sub-lead {
+      display: block; margin-bottom: 6px;
+      font-family: "Heebo", sans-serif; font-weight: 800;
+      color: var(--cream); letter-spacing: -.01em;
+    }
 
     .hero__cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 38px; }
 
@@ -652,8 +658,9 @@
         </h1>
 
         <p class="hero__sub">
-          אם שירתתם.ן במילואים במהלך המלחמה ואתם בעלי עסק – אנחנו מזמינים
-          אתכם להשתתף ב<b>סדרה ארצית של ירידי מכירה</b> למען העסקים שלכם.
+          <span class="hero__sub-lead">מילואימניקים ואנשי קבע</span>
+          אם אתם או בני ובנות זוגכם בעלי עסק – אנחנו מזמינים אתכם להשתתף
+          ב<b>סדרה ארצית של ירידי מכירה</b> למענכם.
         </p>
 
         <div class="hero__cta">
@@ -830,6 +837,20 @@
                   <label for="phone">טלפון <span class="req">*</span></label>
                   <input type="tel" id="phone" name="phone" class="ltr" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="050-1234567" aria-describedby="phoneHint" required />
                   <span class="field__hint" id="phoneHint">למספר הזה תישלח הודעת האישור בוואטסאפ</span>
+                </div>
+                <!-- שדה הזכאות (נוסף 24.08.26 לבקשת טום, יחד עם הרחבת הקהל
+                     ל"מילואימניקים ואנשי קבע" ב-hero). ממופה בתרחיש ‎#9636410:
+                     עמודה G במאסטר, עמודה D בקובץ ההפקות, ובהערה ב-CRM.
+                     ⚠️ לא לשנות את ה-name בלי לעדכן את Make (make-wiring.md) -->
+                <div class="field field--full">
+                  <label for="service_status">סטטוס שירות <span class="req">*</span></label>
+                  <select id="service_status" name="service_status" required>
+                    <option value="" selected disabled>בחרו…</option>
+                    <option>משרת/ת מילואים</option>
+                    <option>משרת/ת קבע</option>
+                    <option>בן/בת הזוג שלי במילואים</option>
+                    <option>בן/בת הזוג שלי בקבע</option>
+                  </select>
                 </div>
                 <div class="field">
                   <label for="city">מקום מגורים <span class="req">*</span></label>
@@ -1103,6 +1124,7 @@
           [form.lastname,      !!val("lastname")],
           [form.email,         /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("email"))],
           [form.phone,         /^0\d{8,9}$/.test(phone)],
+          [form.service_status, !!val("service_status")],
           [form.city,          !!val("city")],
           [form.business_type, !!val("business_type")],
           [form.business_name, !!val("business_name")],
@@ -1143,6 +1165,7 @@
           lastname: val("lastname"),
           email: val("email"),
           phone: phone,
+          service_status: val("service_status"),
           city: val("city"),
           business_type: val("business_type"),
           business_name: val("business_name"),
