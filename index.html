@@ -382,6 +382,13 @@
       font-size: 15px; font-weight: 900; padding: 4px 13px 6px; border-radius: 4px;
       background: var(--khaki); color: var(--ink); transform: rotate(-1.5deg);
     }
+    .city-card__closed {
+      display: inline-block; margin-top: 16px; margin-inline-start: 8px;
+      font-family: "Heebo", sans-serif; font-size: 14px; font-weight: 900;
+      padding: 4px 13px 6px; border-radius: 4px; transform: rotate(-1.5deg);
+      background: rgba(54,59,38,.1); color: rgba(54,59,38,.62);
+      border: 1px dashed rgba(54,59,38,.28);
+    }
     .city-card__ghost {
       position: absolute; inset-block-end: -18px; inset-inline-end: -6px; z-index: 0;
       font-family: "Heebo", sans-serif; font-weight: 900; font-size: 92px; line-height: 1;
@@ -713,6 +720,7 @@
             <h3>נמל יפו</h3>
             <p>מחסן 2, נמל יפו — על המים, בשיתוף נמל יפו.</p>
             <span class="city-card__when">8-10.9.26</span>
+            <span class="city-card__closed">ההרשמה נסגרה</span>
           </div>
           <div class="city-card rv" style="--d:.12s">
             <span class="city-card__ghost" aria-hidden="true">י־ם</span>
@@ -881,7 +889,8 @@
                   <label for="yarid">לאיזה יריד תרצו להירשם? <span class="req">*</span></label>
                   <select id="yarid" name="yarid" required>
                     <option value="" selected disabled>בחרו יריד…</option>
-                    <option>יריד נמל יפו · 8-10.9</option>
+                    <!-- ההרשמה ליריד נמל יפו נסגרה לבקשת טום 07.09 — האפשרות נשארת ברשימה אך חסומה לבחירה -->
+                    <option disabled>יריד נמל יפו · 8-10.9 — ההרשמה נסגרה</option>
                     <option>יריד ירושלים · 16-18.9</option>
                     <option>יריד חיפה · 22-24.9</option>
                     <option>יריד באר שבע · 29.9-1.10</option>
