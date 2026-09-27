@@ -546,6 +546,51 @@
     .success p b { color: var(--red); font-weight: 700; }
     .success .btn { margin-top: 16px; }
 
+    /* ---------------- ההרשמה נסגרה (27.09.26, לבקשת טום) ---------------- */
+    .topbar__status--closed .pulse { background: rgba(54,59,38,.35); animation: none; box-shadow: none; }
+    .btn-closed {
+      background: transparent; color: var(--muted-ink); font-size: 14.5px; padding: 10px 20px;
+      border-radius: 100px; border: 1.5px dashed rgba(54,59,38,.3); cursor: default;
+    }
+    .closed-stamp {
+      display: inline-flex; flex-direction: column; align-items: center; gap: 6px;
+      padding: 16px 30px 18px; border-radius: 10px;
+      background: var(--cream); color: var(--red);
+      border: 3px solid var(--red); outline: 1.5px dashed rgba(222,50,38,.5); outline-offset: -9px;
+      box-shadow: 0 22px 44px -22px rgba(15,18,7,.7);
+      transform: rotate(-2.5deg);
+    }
+    .closed-stamp__main { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(24px, 3vw, 32px); letter-spacing: -.02em; line-height: 1.1; }
+    .closed-stamp__sub { font-family: "Heebo", sans-serif; font-weight: 700; font-size: 14.5px; color: var(--ink); }
+    body.js .hero__cta .closed-stamp { animation: stampIn .7s var(--ease) .75s both; }
+    @keyframes stampIn {
+      0% { opacity: 0; transform: rotate(-9deg) scale(1.7); }
+      60% { opacity: 1; transform: rotate(-1.5deg) scale(.96); }
+      100% { opacity: 1; transform: rotate(-2.5deg) scale(1); }
+    }
+    .closed-note { text-align: center; padding: 18px 6px 8px; }
+    .closed-note__icon {
+      width: 74px; height: 74px; margin: 0 auto 22px; border-radius: 50%;
+      display: grid; place-items: center; font-size: 32px; color: var(--red);
+      background: var(--red-soft); border: 1.5px solid rgba(222,50,38,.55);
+      animation: popIn .6s var(--ease) both;
+    }
+    .closed-note p { margin: 0 auto 12px; max-width: 50ch; color: var(--muted-ink); font-size: 16.5px; line-height: 1.7; }
+    .closed-note p b { color: var(--ink); font-weight: 800; }
+    .closed-note__next {
+      display: inline-block; margin: 14px auto 6px; padding: 14px 22px; border-radius: 14px;
+      background: rgba(231,215,159,.4); border: 1px solid rgba(54,59,38,.14);
+      font-size: 16px; line-height: 1.6; color: var(--ink);
+    }
+    .closed-note__next span { display: block; font-family: "Heebo", sans-serif; font-weight: 900; font-size: 18px; }
+    .closed-note .btn { margin-top: 20px; }
+    .footer__cta .closed-stamp { transform: rotate(-2deg); }
+    .mobile-cta__closed {
+      display: block; text-align: center; font-family: "Heebo", sans-serif; font-weight: 800;
+      font-size: 15px; color: var(--ink); padding: 12px 8px;
+    }
+    .mobile-cta__closed b { color: var(--red); }
+
     /* footer — פס קרם סוגר, כמו רצועת הלוגואים למעלה */
     .footer { border-top: 1px solid var(--line-ink); margin-top: clamp(30px, 6vh, 60px); background: var(--cream); color: var(--ink); }
     .footer__cta { text-align: center; padding-block: clamp(66px, 11vh, 120px); }
@@ -645,9 +690,9 @@
       <span class="brand__name">שווים יותר<b>.</b></span>
     </a>
 
-    <div class="topbar__status"><span class="pulse"></span> <span>ההרשמה למציגים פתוחה · מספר המקומות מוגבל</span></div>
+    <div class="topbar__status topbar__status--closed"><span class="pulse"></span> <span>ההרשמה למציגים נסגרה · תודה לכל הנרשמים</span></div>
 
-    <a class="btn btn-main" href="#register">להרשמה ליריד</a>
+    <span class="btn btn-closed">ההרשמה נסגרה</span>
   </header>
 
   <!-- HERO -->
@@ -671,7 +716,10 @@
         </p>
 
         <div class="hero__cta">
-          <a class="btn btn-main btn-lg" href="#register">אני רוצה להירשם</a>
+          <div class="closed-stamp" role="status">
+            <span class="closed-stamp__main">ההרשמה נסגרה</span>
+            <span class="closed-stamp__sub">תודה למאות בעלי העסקים שנרשמו ♥</span>
+          </div>
           <a class="btn btn-line" href="#cities">איפה ומתי?&nbsp;↓</a>
         </div>
 
@@ -736,6 +784,7 @@
             <h3>חיפה</h3>
             <p>גן מניה, רחבת האודיטוריום — בשיתוף עיריית חיפה.<br><small>בשל הביקוש הרב עברנו למתחם גדול יותר.</small></p>
             <span class="city-card__when">22-24.9.26</span>
+            <span class="city-card__closed">ההרשמה נסגרה</span>
           </div>
           <div class="city-card rv" style="--d:.26s">
             <span class="city-card__ghost" aria-hidden="true">ב״ש</span>
@@ -743,6 +792,7 @@
             <h3>באר שבע</h3>
             <p>מתחם סינמה סיטי — בשיתוף סינמה סיטי באר שבע.</p>
             <span class="city-card__when">29.9-1.10.26</span>
+            <span class="city-card__closed">ההרשמה נסגרה</span>
           </div>
         </div>
       </div>
@@ -755,7 +805,7 @@
           <p class="eyebrow">למי זה מתאים</p>
           <h2 class="section__title display">עסקים <span class="accent">מכל התחומים.</span></h2>
           <p class="section__lead">
-            ההרשמה פתוחה לעסקים מכל התחומים – מזון, חקלאות, עיצוב, אופנה, אוכל מוכן,
+            ביריד משתתפים עסקים מכל התחומים – מזון, חקלאות, עיצוב, אופנה, אוכל מוכן,
             לייף סטייל, אמנות, מתן שירותים, טיפוח, מתנות ועוד.
           </p>
         </div>
@@ -781,7 +831,7 @@
         <div class="section__head rv">
           <p class="eyebrow">איך זה עובד</p>
           <h2 class="section__title display">שלושה צעדים <span class="accent">ואתם בפנים.</span></h2>
-          <p class="section__lead">ההרשמה פתוחה עכשיו ומספר המקומות מוגבל. מלאו את טופס ההרשמה — ואולי גם העסק שלך יהיה חלק מהיוזמה.</p>
+          <p class="section__lead">ההרשמה נסגרה. צוותי ההפקה עוברים על הבקשות שהתקבלו ופונים ישירות לעסקים שנבחרו.</p>
         </div>
         <div class="steps">
           <div class="step rv" style="--d:.05s">
@@ -810,12 +860,24 @@
       <div class="overlay__body">
         <div class="ticket">
           <div class="ticket__head">
-            <span class="ticket__badge">ההרשמה פתוחה · מספר המקומות מוגבל</span>
-            <h3 class="ticket__title display" id="regTitle">טופס הרשמה <span class="accent">ליריד הלב עם המילואימניקים.</span></h3>
-            <p class="ticket__sub">מלאו את הפרטים — ואולי גם העסק שלך יהיה חלק מהיוזמה. לוקח פחות מ-5 דקות.</p>
+            <span class="ticket__badge">ההרשמה למציגים הסתיימה</span>
+            <h3 class="ticket__title display" id="regTitle">ההרשמה נסגרה. <span class="accent">תודה על ההיענות!</span></h3>
           </div>
 
           <div class="ticket__body">
+            <!-- מצב "ההרשמה נסגרה" (27.09.26, לבקשת טום). הטופס למטה מוסתר ולא נשלח.
+                 לפתיחה מחדש: להסיר את closed-note, להסיר hidden מהטופס ואת REGISTRATION_CLOSED ב-JS. -->
+            <div class="closed-note">
+              <div class="closed-note__icon" aria-hidden="true">♥</div>
+              <p>מאות בעלי עסקים נרשמו לסדרת ירידי הלב, <b>וההרשמה למציגים הסתיימה.</b></p>
+              <p>מי שנרשם ונבחר יקבל פנייה ישירה מצוות ההפקה של היריד.</p>
+              <div class="closed-note__next">
+                <span>נתראה ביריד באר שבע!</span>
+                29.9 עד 1.10 במתחם סינמה סיטי · הכניסה למבקרים חופשית
+              </div>
+              <div><a class="btn btn-main btn-lg" href="#top">חזרה לדף</a></div>
+            </div>
+
             <!--
               ═══ חיווט (עודכן 09.08.26) ═══
               הטופס נשלח ל-webhook הייעודי של תרחיש Make ‎#9636410
@@ -827,7 +889,7 @@
               פרטים מלאים: make-wiring.md. ⚠️ לא לשנות את שמות השדות (name=)
               בלי לעדכן את התרחיש — המיפוי ב-Make תלוי בהם.
             -->
-            <form id="yaridForm" novalidate>
+            <form id="yaridForm" novalidate hidden>
               <p class="form-legend">שדות המסומנים ב-<span class="req">*</span> הם שדות חובה</p>
               <div class="form-grid">
                 <div class="field">
@@ -1017,7 +1079,10 @@
     <div class="wrap">
       <div class="footer__cta">
         <h2 class="display rv">אתם התגייסתם למעננו,<br>עכשיו תורנו <span class="accent">להתגייס למענכם.</span></h2>
-        <a class="btn btn-main btn-lg" href="#register">אני רוצה להירשם</a>
+        <div class="closed-stamp">
+          <span class="closed-stamp__main">ההרשמה למציגים נסגרה</span>
+          <span class="closed-stamp__sub">נתראה ביריד באר שבע · 29.9 עד 1.10</span>
+        </div>
       </div>
       <div class="footer__grid">
         <div class="footer__col footer__brand">
@@ -1036,7 +1101,7 @@
       </div>
       <div class="footer__base">
         <span>© 2026 שווים יותר ר.מ.י.ד בע"מ · כל הזכויות שמורות</span>
-        <span>יריד הלב עם המילואימניקים · ההרשמה למציגים פתוחה</span>
+        <span>יריד הלב עם המילואימניקים · ההרשמה למציגים נסגרה</span>
       </div>
     </div>
   </footer>
@@ -1048,7 +1113,7 @@
     </div>
   </div>
 
-  <div class="mobile-cta"><a class="btn btn-main" href="#register">אני רוצה להירשם</a></div>
+  <div class="mobile-cta"><span class="mobile-cta__closed"><b>ההרשמה נסגרה</b> · תודה לכל הנרשמים ♥</span></div>
 
   <script>
     (function () {
@@ -1105,6 +1170,9 @@
       // ═══ registration form → Make ═══
       // webhook ייעודי של תרחיש ‎#9636410 "יריד הלב — הרשמות מדף הנחיתה" (נוצר 09.08.26):
       // מאסטר-שיטס + טאב לפי יריד (הקובץ של ההפקות) + איש קשר בפיירברי + וואטסאפ.
+      // ההרשמה נסגרה 27.09.26 — שום שליחה ל-Make. לפתיחה מחדש: false + להסיר hidden מהטופס.
+      var REGISTRATION_CLOSED = true;
+      if (REGISTRATION_CLOSED) return;
       var FORM_WEBHOOK_URL = "https://hook.eu2.make.com/70703m9bphjngt6ueurxcay95xuzr4pa";
       var PAGE_ID = "yarid-miluim";
 
